@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+
+/* VELIKOST TEXTU:
+mobil (0 - 767)
+  text: 16 px
+  žluté nadpisy: 24 px
+  vínové nadpisy: 22 px
+  šedé sekce: 20 px
+
+tablet? (768 - 959)
+  text: 18 px
+  žluté nadpisy: 26 px
+  vínové nadpisy: 24 px
+  šedé sekce: 22 px
+
+PC (960 - nekonečno)
+  text: 20 px
+  žluté nadpisy: 28 px
+  vínové nadpisy: 26 px
+  šedé sekce: 24 px
+*/
+
+/* BARVY:
+žlutá: #f6bd09
+šedá: #aeaebe
+vínová: #89455d
+menu hover: #8d5e6e
+  */
+
+/* MARGINY:
+mobily:
+  mt-4
+  mb-4;
+max 5
+
+tablety:
+  mt + mb 6
+
+PC:
+  mt + mb 8 min 6
+
+červené nadpisy: mt-4 + mb-2
+*/
+
+html {
+  box-sizing: border-box;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
+/* * {
+  border: 1px solid rgb(109, 61, 136);
+} */
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #89455d;
+}
+
+/* Media query tablet: */
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+}
+
+/* Media query PC: */
+
+@media screen and (min-width: 960px) {
+  body {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+}

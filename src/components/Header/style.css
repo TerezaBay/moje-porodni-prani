@@ -1,0 +1,86 @@
+/* Styly pro hlavičku (: */
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+
+.header_homepage {
+  height: 100vh;
+  padding: 20px 40px;
+  /* background-image: linear-gradient(rgba(75, 75, 75, 0.137), rgba(75, 75, 75, 0.137)), url(../img/header-bg-ukol.jpg);
+  background-position: 50% 50%;  */
+  background: url(../../assets/main/header-bg-ukol.jpg) 50% 50%; 
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+
+.header_logo {
+  font-family: 'Clicker Script', cursive;
+  font-size: 2.5em;
+}
+
+/* .header_nav { */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: space-between; */
+/* } */
+
+.header_menu {
+  min-width: 30%;
+}
+
+/* .header_menu-buttons {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  justify-content: space-between;
+} */
+
+.header_menu-buttons {
+  display: none;
+}
+
+/* .header_menu-buttons li {
+  display: inline-block;
+} */
+
+.header_content {
+  margin-top: 45%;
+}
+
+/* odsazení pro mobilní navigaci: */
+header {
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  header {
+    margin-top: 0;
+  }
+
+  .header_menu-buttons {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: space-between;
+  }
+ 
+  /* .header_menu-buttons, */
+  .header_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header_title {
+    font-size: 3em;
+  }
+
+  .header_title-text {
+    font-size: 1.25em;
+  }
+
+  .header_content {
+    margin-top: 15%;
+  }
+}

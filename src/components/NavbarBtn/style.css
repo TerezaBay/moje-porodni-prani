@@ -1,0 +1,53 @@
+/* nav-btn hamburger */
+.nav-btn {
+  display: block;
+  width: 35px;
+  height: 3rem;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.nav-btn span {
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: white;
+  transition-property: opacity, transform;
+  transition-duration: 0.2s;
+}
+
+.nav-btn span:nth-child(1) {
+  transform: translateY(-250%);
+}
+
+.nav-btn span:nth-child(3) {
+  transform: translateY(250%);
+}
+
+.nav-btn--open span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-btn--open span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.nav-btn--open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.nav-btn:focus {
+  outline: none;
+}
+
+@media (min-width: 768px) {
+.nav-btn {
+  display: none;
+}
+}

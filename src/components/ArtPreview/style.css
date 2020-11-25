@@ -1,0 +1,57 @@
+.preview {
+  background-color: white;
+  padding-bottom: 1rem;
+}
+
+.preview_img {
+  max-width: 100%;
+  height: 20rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.preview_content {
+  padding: 0 2rem;
+  margin: 0;
+  text-align: center;
+}
+
+.preview_name {
+  margin: 3rem 0 2rem;
+}
+
+.preview_text {
+  margin: 0;
+  padding: 0 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .preview_text {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 960px) {
+  .preview {
+    margin: 8rem auto 0;
+    max-width: 1000px;
+    display: flex;
+    padding-bottom: 0;
+  }
+
+  .preview_img {
+    min-width: 35%;
+    height: initial;
+  }
+
+  .preview_content {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .preview_name {
+    margin: 4rem 0 2rem;
+  }
+}

@@ -1,0 +1,31 @@
+.title-div {
+  background-color: #f6bd09;
+  padding: 2.5rem;
+}
+
+.title-text {
+  color: white;
+  padding-right: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .title-text {
+    text-align: right;
+  }
+
+  .title-div {
+    background-color: #f6bd09;
+    padding: 2.5rem;
+    margin-right: 30%;
+  }
+
+  .title-div_short {
+    margin-right: 50%;
+  }
+}
+
+@media (min-width: 960px) {
+
+}

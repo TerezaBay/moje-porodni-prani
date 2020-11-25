@@ -1,0 +1,106 @@
+.navbar {
+  background: #89455d;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  /* pro mobily pak musím odsadit header o výšku navigace! */
+}
+
+.navbar_logo {
+  font-family: 'Clicker Script', cursive;
+  font-size: 22px;
+  margin-left: 2rem;
+}
+
+.navbar_logo a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar_container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+}
+
+.navbar_links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 18rem;
+  background-color: #89455d;
+}
+
+.navbar_links a {
+  display: block;
+  padding: 10px;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+  border-top: 2px solid #8d5e6e;
+}
+
+.navbar_links a:hover,
+.navbar_links a:focus {
+  background-color: #8d5e6e;
+}
+
+/* pro navbar mobil */
+.navbar_links--closed {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  /* menu se při breakpointu nezobrazuje dobře, vyřešit až po ujasnění odkazů; pokud měnit breakpoint, změnit veškeré hodnoty! */
+
+  /* styly vyskakovací menu se scrollem */
+  .navbar {
+    position: fixed;
+    top: -76px;
+    transition: all 0.3s ease-in;
+    height: 76px;
+  }
+
+  .navbar--scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  /* ostatní */
+  .navbar_logo {
+    margin-left: 3rem;
+    font-size: 30px;
+  }
+
+  .navbar_container {
+    margin: 0;
+  }
+
+  .navbar_links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: fit-content;
+  }
+
+  .navbar_links a {
+    padding: 20px 30px;
+    border-top: 0;
+  }
+}
+
+/* * {
+  border: 1px solid darkblue;
+} */

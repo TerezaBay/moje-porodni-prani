@@ -1,0 +1,33 @@
+.section_quote {
+  background-color: #aeaebe;
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+}
+
+.quote_text {
+  font-family: 'Lora', serif;
+  font-size: 20px;
+  max-width: 800px;
+  text-align: center;
+  color: white;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .section_quote {
+    padding: 5rem 0;
+  }
+  
+  .quote_text {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 960px) {
+  .quote_text {
+    font-size: 24px;
+  }
+}
