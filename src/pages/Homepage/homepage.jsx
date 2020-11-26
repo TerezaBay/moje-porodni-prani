@@ -7,7 +7,6 @@ import { articleTexts } from '../../texts/articleTexts.js';
 import { sectionTexts } from '../../texts/sectionTexts.js';
 import { titleTexts } from '../../texts/titleTexts.js';
 
-// import Navbar from '../../components/Navbar/navbar.jsx';
 import Header from '../../components/Header/header.jsx';
 import SectionQuote from '../../components/SectionQuote/section.jsx';
 import Title from '../../components/Title/title.jsx';

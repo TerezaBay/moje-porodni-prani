@@ -6,13 +6,25 @@ import './index.html';
 import './style.css';
 
 import Navbar from './components/Navbar/navbar.jsx';
-// import Homepage from './pages/Homepage/homepage.jsx';
+
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
-      {/* <Homepage /> */}
 
       <Switch>
         {routes.map((route, i) => (

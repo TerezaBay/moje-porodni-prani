@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
 import { useMediaQuery } from 'react-responsive';
-import { HashRouter as Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import NavbarBtn from '../NavbarBtn/index.jsx';
 import { home } from '../../texts/homeTexts.js';

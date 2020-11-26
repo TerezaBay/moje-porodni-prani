@@ -51,8 +51,8 @@
   border-top: 2px solid #8d5e6e;
 }
 
-.navbar_links a:hover,
-.navbar_links a:focus {
+.navbar_link:hover,
+.navbar_link:focus {
   background-color: #8d5e6e;
 }
 
@@ -70,6 +70,7 @@
     top: -76px;
     transition: all 0.3s ease-in;
     height: 76px;
+    overflow: hidden;
   }
 
   .navbar--scrolled {
@@ -96,7 +97,7 @@
   }
 
   .navbar_link {
-    padding: 20px 30px;
+    padding: 22px 30px;
     border-top: 0;
   }
 }
