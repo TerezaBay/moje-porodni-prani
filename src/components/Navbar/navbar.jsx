@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import NavbarBtn from '../NavbarBtn/index.jsx';
 import { home } from '../../texts/homeTexts.js';
-import {links} from "../../links.js"
+import { links } from '../../links.js';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -19,8 +19,13 @@ const Navbar = () => {
   }, []);
   // musí se donastavit, aby fungovalo jen pro první stranu
 
+  const scrollToTop = () => window.scrollTo(0, 0);
+
   const [menuIsOpen, setMenuIsOpen] = useState(false);
-  const handleClick = () => setMenuIsOpen(!menuIsOpen);
+  const handleClick = () => {
+    scrollToTop();
+    setMenuIsOpen(!menuIsOpen);
+  };
 
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
@@ -30,7 +35,9 @@ const Navbar = () => {
       className={scrolled ? 'navbar navbar--scrolled' : 'navbar'}
     >
       <div className="navbar_logo">
-        <Link to={links[0].url}>{home.logo}</Link>
+        <Link onClick={scrollToTop} to={links[0].url}>
+          {home.logo}
+        </Link>
       </div>
 
       <div className="navbar_container">
