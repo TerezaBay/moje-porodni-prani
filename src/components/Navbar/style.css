@@ -42,7 +42,7 @@
   background-color: #89455d;
 }
 
-.navbar_links a {
+.navbar_link {
   display: block;
   padding: 10px;
   list-style: none;
@@ -95,7 +95,7 @@
     width: fit-content;
   }
 
-  .navbar_links a {
+  .navbar_link {
     padding: 20px 30px;
     border-top: 0;
   }

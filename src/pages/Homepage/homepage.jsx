@@ -1,26 +1,25 @@
 import React from 'react';
 import './style.css';
+import { links } from '../../links.js';
 import { home } from '../../texts/homeTexts.js';
 import { serviceTexts } from '../../texts/serviceTexts.js';
 import { articleTexts } from '../../texts/articleTexts.js';
 import { sectionTexts } from '../../texts/sectionTexts.js';
 import { titleTexts } from '../../texts/titleTexts.js';
 
+// import Navbar from '../../components/Navbar/navbar.jsx';
+import Header from '../../components/Header/header.jsx';
 import SectionQuote from '../../components/SectionQuote/section.jsx';
 import Title from '../../components/Title/title.jsx';
 import ArtPreview from '../../components/ArtPreview/preview.jsx';
 import Service from '../../components/Service/service.jsx';
 import Author from '../../components/Author/author.jsx';
 import StyledLink from '../../components/StyledLink/index.jsx';
+import Footer from '../../components/Footer/index.jsx';
 
-const HomepageMain = ({
-  // emphaText,
-  // previewTitle,
-  // authors,
-  // button2Text,
-  // button2Url,
-}) => (
+const Homepage = () => (
   <>
+    <Header />
     <SectionQuote text={sectionTexts.section1} />
 
     <main id="main" className="homepage_main">
@@ -53,8 +52,8 @@ const HomepageMain = ({
         </div>
         <SectionQuote text={sectionTexts.section2} />
         <StyledLink
-          text={home.button2Text}
-          url={home.button2Url}
+          text={links[2].name}
+          url={links[2].url}
           type="transparent"
         />
       </section>
@@ -76,7 +75,9 @@ const HomepageMain = ({
         </div>
       </section>
     </main>
+
+    <Footer copyrightText={home.footerCopyright} links={home.footerLinks} />
   </>
 );
 
-export default HomepageMain;
+export default Homepage;

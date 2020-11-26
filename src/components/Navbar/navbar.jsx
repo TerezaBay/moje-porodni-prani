@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
 import { useMediaQuery } from 'react-responsive';
+import { HashRouter as Link } from 'react-router-dom';
+
 import NavbarBtn from '../NavbarBtn/index.jsx';
 import { home } from '../../texts/homeTexts.js';
+import {links} from "../../links.js"
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -20,13 +23,6 @@ const Navbar = () => {
   const handleClick = () => setMenuIsOpen(!menuIsOpen);
 
   const isMobile = useMediaQuery({ maxWidth: 767 });
-  // když použiji useMediaQuery, tak mi React bude sám hlídat změnu šířky okna prohlížeče a rerenderuje to, pokud změna nastane - nemusím použít ani stav, ani useEffect - je to boží!
-
-  // const [isMobile, setIsMobile] = useState(true);
-
-  // useEffect(() => {
-  //   window.innerWidth < 768 ? setIsMobile(true) : setIsMobile(false);
-  // }, []);
 
   return (
     <nav
@@ -34,7 +30,7 @@ const Navbar = () => {
       className={scrolled ? 'navbar navbar--scrolled' : 'navbar'}
     >
       <div className="navbar_logo">
-        <a href={home.logoLink}>{home.logo}</a>
+        <Link to={links[0].url}>{home.logo}</Link>
       </div>
 
       <div className="navbar_container">
@@ -48,11 +44,11 @@ const Navbar = () => {
             menuIsOpen || !isMobile ? 'navbar_links' : 'navbar_links--closed'
           }
         >
-          {home.footerLinks.map((link, i) => (
+          {links.map((link, i) => (
             <li key={i}>
-              <a href={link.url} onClick={handleClick}>
+              <Link className="navbar_link" to={link.url} onClick={handleClick}>
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

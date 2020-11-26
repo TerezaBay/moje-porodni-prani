@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css';
 import StyledLink from '../StyledLink/index.jsx';
 import { home } from '../../texts/homeTexts.js';
+import { links } from '../../links.js';
 
 const Header = ({}) => (
   <header id="header" className="header_homepage">
@@ -11,15 +12,15 @@ const Header = ({}) => (
         <ul className="header_menu-buttons">
           <li>
             <StyledLink
-              text={home.button1Text}
-              url={home.button1Url}
+              text={links[1].name}
+              url={links[1].url}
               type="transparent"
             />
           </li>
           <li>
             <StyledLink
-              text={home.button2Text}
-              url={home.button2Url}
+              text={links[2].name}
+              url={links[2].url}
               type="transparent"
             />
           </li>
@@ -29,7 +30,7 @@ const Header = ({}) => (
     <div className="header_content">
       <h1 className="header_title">{home.title}</h1>
       <p className="header_title-text">{home.titleText}</p>
-      <StyledLink text={home.button3Text} />
+      <StyledLink text={home.button3Text} url={links[1].url}/>
     </div>
   </header>
 );

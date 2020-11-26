@@ -1,25 +1,25 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import {routes} from "./links.js"
 import './index.html';
 import './style.css';
 
-import { home } from './texts/homeTexts.js';
-import Header from './components/Header/header.jsx';
-import HomepageMain from './pages/HomepageMain/homepage.jsx';
-import Footer from './components/Footer/index.jsx';
 import Navbar from './components/Navbar/navbar.jsx';
+// import Homepage from './pages/Homepage/homepage.jsx';
 
 const App = () => {
   return (
-    <>
+    <Router>
       <Navbar />
+      {/* <Homepage /> */}
 
-      <Header />
-
-      <HomepageMain />
-
-      <Footer copyrightText={home.footerCopyright} links={home.footerLinks} />
-    </>
+      <Switch>
+        {routes.map((route, i) => (
+          <Route key={i} {...route} />
+        ))}
+      </Switch>
+    </Router>
   );
 };
 

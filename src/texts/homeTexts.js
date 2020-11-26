@@ -1,11 +1,11 @@
 export const home = {
   // odkazy header + styled links
   logo: 'Moje porodní přání',
-  logoLink: "#header",
-  button1Text: 'Sestavit přání',
-  button1Url: '#main',
-  button2Text: 'Užitečné informace',
-  button2Url: '#authors',
+  // logoLink: "#header",
+  // button1Text: 'Sestavit přání',
+  // button1Url: '#main',
+  // button2Text: 'Užitečné informace',
+  // button2Url: '#authors',
   button3Text: 'Sestavit porodní přání',
 
   // titles header
