@@ -23,8 +23,12 @@ const Navbar = () => {
 
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const handleClick = () => {
-    scrollToTop();
     setMenuIsOpen(!menuIsOpen);
+  };
+
+  const handleClickScroll = () => {
+    setMenuIsOpen(!menuIsOpen);
+    scrollToTop();
   };
 
   const isMobile = useMediaQuery({ maxWidth: 767 });
@@ -53,7 +57,7 @@ const Navbar = () => {
         >
           {links.map((link, i) => (
             <li key={i}>
-              <Link className="navbar_link" to={link.url} onClick={handleClick}>
+              <Link className="navbar_link" to={link.url} onClick={handleClickScroll}>
                 {link.name}
               </Link>
             </li>

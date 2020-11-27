@@ -46,6 +46,7 @@ const Homepage = () => (
               title={article.artTitle}
               img={article.artImg}
               text={article.artPerex}
+              url={article.artUrl}
             />
           ))}
         </div>
