@@ -1,3 +1,7 @@
+.checkbox {
+  display: flex;
+}
+
 .checkbox_label {
-  display: block;
+display: inline-block;
 }

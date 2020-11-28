@@ -1,11 +1,12 @@
 import Homepage from './pages/Homepage/homepage.jsx';
-import Form from './pages/Form/form.jsx';
 import Info from './pages/Info/info.jsx';
 import Article from './pages/Homepage/homepage.jsx';
+import Form01 from './pages/Form/Form 01/form01.jsx';
+import FormHome from './pages/Form/Form 00 home/formhome.jsx';
 
 export const routes = [
   { path: '/', component: Homepage, exact: true },
-  { path: '/form', component: Form },
+  { path: '/formhome', component: FormHome },
   { path: '/info', component: Info },
   { path: '/article', component: Article },
 ];
@@ -16,9 +17,9 @@ export const links = [
   { name: 'Užitečné informace', url: `${routes[2].path}` },
 ];
 
-// export const linksForm = [
-//   { path: '/', component: Homepage, exact: true },
-//   { path: '/form', component: Form },
-//   { path: '/info', component: Info },
-//   { path: '/article', component: Article },
-// ]
+export const routesForm = [
+  { path: '/formhome/', component: Form01 },
+  // { path: '/form02', component: Form02 },
+  // { path: '/form', component: Info },
+  // { path: '/form', component: Article },
+];

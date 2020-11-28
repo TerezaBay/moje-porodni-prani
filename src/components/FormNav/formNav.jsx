@@ -7,12 +7,14 @@ const FormNav = () => (
   <nav className="form-nav">
     <ul className="form-nav_links">
       <li>
-        {formTitle.map((text) => (
-          <a href="url">{text}</a>
+        {formTitle.map((text, i) => (
+          <a key={i} href="url">
+            {text}
+          </a>
         ))}
       </li>
     </ul>
   </nav>
 );
 
-export default FormNav
+export default FormNav;

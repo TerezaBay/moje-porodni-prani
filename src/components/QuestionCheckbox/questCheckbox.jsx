@@ -2,12 +2,8 @@ import React, { useState } from 'react';
 import './style.css';
 
 import Checkbox from '../../components/Checkbox/checkbox.jsx';
-import FormNav from '../../components/Checkbox/checkbox.jsx';
 
-import { formTitle } from '../../texts/formTexts.js';
-import { formTexts } from '../../texts/formTexts.js';
-
-const Question = () => {
+const QuestionCheckbox = ({ quest }) => {
   const [checked, setChecked] = useState([]);
   const [disabled, setDisabled] = useState(false);
 
@@ -28,10 +24,10 @@ const Question = () => {
   };
 
   return (
-    <div className="quest">
-      <h3 className="quest_title">{formTexts[1].quest}</h3>
-      {formTexts[1].answers.map((answer, i) => (
+    <>
+      {quest.answers.map((answer, i) => (
         <Checkbox
+          key={i}
           disabled={disabled}
           func={(value) => handleChange(value, i)}
           value={!!checked[i]}
@@ -42,21 +38,10 @@ const Question = () => {
         disabled={false}
         func={handleChangeNoPrevious}
         value={noPreviousChecked}
-        text={formTexts[0].textDisabled}
+        text={quest.textDisabled}
       />
-    </div>
+    </>
   );
 };
 
-const Form = () => (
-  <>
-    <FormNav />
-    <main className="form">
-      <form action="">
-        <Question />
-      </form>
-    </main>
-  </>
-);
-
-export default Form;
+export default QuestionCheckbox;
