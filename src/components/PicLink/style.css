@@ -1,0 +1,61 @@
+.info_main {
+  margin-top: 10rem;
+}
+
+.picLink_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 6rem;
+}
+
+.picLink {
+  display: block;
+  background-size: cover;
+  background-position: center;
+}
+
+.picLink_content {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.picLink--span-2 {
+  grid-row: span 2;
+}
+
+.picLink--span-2 .picLink_content {
+  min-height: 600px;
+}
+
+.info_main .preview {
+  box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.25);
+}
+
+.info_main .section_quote {
+  margin: 6rem 0;
+}
+
+.info_main .title-div_short {
+  margin-bottom: 6rem;
+}
+
+.picLink_name {
+  text-transform: uppercase;
+}
+
+.picLink_text {
+  margin: 0;
+  padding: 0 40px;
+}
+
+a.picLink {
+  text-decoration: none;
+  color: white;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
