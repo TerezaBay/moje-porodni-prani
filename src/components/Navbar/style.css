@@ -67,13 +67,24 @@
   /* styly vyskakovací menu se scrollem */
   .navbar {
     position: fixed;
-    top: -76px;
-    transition: all 0.3s ease-in;
+    /* top: -76px;
+    transition: all 0.3s ease-in; */
     height: 76px;
     overflow: hidden;
   }
 
+  .navbar_animation {
+    top: -76px;
+    transition: all 0.3s ease-in;
+  }
+
   .navbar--scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .navbar--fixed {
     position: fixed;
     top: 0;
     left: 0;
