@@ -1,4 +1,5 @@
-.test {
-  background-color: aqua;
-  margin: 2rem;
+.quest {
+  padding-top: 5rem;
+  margin-left: 20rem;
+  /* dořešit po routeru s meníčkem position fixed */
 }

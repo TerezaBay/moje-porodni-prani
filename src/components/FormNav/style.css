@@ -1,0 +1,18 @@
+.form-nav {
+  background-color: #aeaebe;
+  height: 100vh;
+  width: 16rem;
+  position: fixed;
+}
+
+.form-nav_links {
+  padding-top: 10rem;
+}
+
+.form-nav_links li {
+  display: block;
+}
+
+.form-nav_links a {
+  display: block;
+}
