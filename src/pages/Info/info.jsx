@@ -3,13 +3,12 @@ import './style.css';
 import { titleTexts } from '../../texts/titleTexts.js';
 import { articleTexts } from '../../texts/articleTexts.js';
 import { sectionTexts } from '../../texts/sectionTexts.js';
+import { picLinkTexts } from '../../texts/piclinkTexts.js';
 
-import Header from '../../components/Header/header.jsx';
 import SectionQuote from '../../components/SectionQuote/section.jsx';
 import Title from '../../components/Title/title.jsx';
 import ArtPreview from '../../components/ArtPreview/preview.jsx';
-import StyledLink from '../../components/StyledLink/index.jsx';
-import Footer from '../../components/Footer/index.jsx';
+import PicLink from '../../components/PicLink/picLink';
 
 const Info = () => (
   <>
@@ -23,6 +22,24 @@ const Info = () => (
             img={article.artImg}
             text={article.artPerex}
             url={article.artUrl}
+          />
+        ))}
+      </section>
+
+      <SectionQuote text={sectionTexts.section3} />
+      <Title
+        titleClass="title-div title-div_short"
+        titleText={titleTexts.titleText4}
+      />
+      <section className="picLink_container">
+        {picLinkTexts.map((link, i) => (
+          <PicLink
+            key={i}
+            title={link.linkTitle}
+            img={link.linkImg}
+            text={link.linkText}
+            url={link.linkUrl}
+            type={link.type}
           />
         ))}
       </section>

@@ -7,7 +7,7 @@ import './index.html';
 import './style.css';
 
 import Navbar from './components/Navbar/navbar.jsx';
-import Footer from './components/Footer/index.jsx';
+import Footer from './components/Footer/footer.jsx';
 
 const App = () => {
   return (
