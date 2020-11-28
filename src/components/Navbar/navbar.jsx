@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
 import { useMediaQuery } from 'react-responsive';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import NavbarBtn from '../NavbarBtn/index.jsx';
 import { home } from '../../texts/homeTexts.js';
@@ -9,19 +9,23 @@ import { links } from '../../links.js';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  let location = useLocation();
 
   const handleScroll = () => {
     window.scrollY > 600 ? setScrolled(true) : setScrolled(false);
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-  }, []);
-  // musí se donastavit, aby fungovalo jen pro první stranu
+    if (location.pathname === '/') {
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
+  }, [location]);
 
   const scrollToTop = () => window.scrollTo(0, 0);
 
   const [menuIsOpen, setMenuIsOpen] = useState(false);
+
   const handleClick = () => {
     setMenuIsOpen(!menuIsOpen);
   };
@@ -33,11 +37,21 @@ const Navbar = () => {
 
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
+  const [navbarClass, setNavbarClass] = useState('navbar');
+
+  useEffect(() => {
+    if (location.pathname === '/') {
+      setNavbarClass('navbar navbar_animation');
+      if (scrolled) {
+        setNavbarClass('navbar navbar_animation navbar--scrolled');
+      }
+    } else {
+      setNavbarClass('navbar navbar--fixed');
+    }
+  }, [scrolled, location]);
+
   return (
-    <nav
-      id="navbar"
-      className={scrolled ? 'navbar navbar--scrolled' : 'navbar'}
-    >
+    <nav id="navbar" className={navbarClass}>
       <div className="navbar_logo">
         <Link onClick={scrollToTop} to={links[0].url}>
           {home.logo}
@@ -57,7 +71,11 @@ const Navbar = () => {
         >
           {links.map((link, i) => (
             <li key={i}>
-              <Link className="navbar_link" to={link.url} onClick={handleClickScroll}>
+              <Link
+                className="navbar_link"
+                to={link.url}
+                onClick={handleClickScroll}
+              >
                 {link.name}
               </Link>
             </li>

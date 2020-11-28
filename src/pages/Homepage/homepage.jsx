@@ -14,7 +14,6 @@ import ArtPreview from '../../components/ArtPreview/preview.jsx';
 import Service from '../../components/Service/service.jsx';
 import Author from '../../components/Author/author.jsx';
 import StyledLink from '../../components/StyledLink/index.jsx';
-import Footer from '../../components/Footer/index.jsx';
 
 const Homepage = () => (
   <>
@@ -76,7 +75,6 @@ const Homepage = () => (
       </section>
     </main>
 
-    <Footer copyrightText={home.footerCopyright} links={home.footerLinks} />
   </>
 );
 
