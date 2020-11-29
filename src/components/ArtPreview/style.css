@@ -54,4 +54,8 @@
   .preview_name {
     margin: 4rem 0 2rem;
   }
+
+  .styled_link {
+    align-self: flex-end;
+  }
 }

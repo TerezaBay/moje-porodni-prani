@@ -1,6 +1,5 @@
 .styled_link {
   display: inline-block;
-  align-self: flex-end;
 }
 
 .styled_link a {
@@ -25,6 +24,14 @@
 
 .styled_link .yellow {
   background-color: #f6bd09;
+  font-weight: 600;
+  padding: 12px 3rem;
+  margin: 2rem 0 2rem;
+  display: inline-block;
+}
+
+.styled_link .grey {
+  background-color: #aeaebe;
   font-weight: 600;
   padding: 12px 3rem;
   margin: 2rem 0 2rem;

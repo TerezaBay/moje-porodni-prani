@@ -2,7 +2,7 @@ export const articleTexts = [
   {
     artTitle: 'Co je to porodní plán?',
     artImg: 'art01',
-    artUrl: '/article',
+    artUrl: '/co-je-porodni-plan',
     artPerex:
       'Porodní plán shrnuje představy, přání a požadavky rodičů na okolnosti narození jejich miminka a zdravotní služby, které jim budou při porodu poskytovány. Každý rodičovský pár považuje za důležité něco jiného, proto mohou mít porodní plány a porodní přání různý obsah i různou formu.',
     artBody: `<p>Porodní plán shrnuje představy, přání a požadavky rodičů na okolnosti narození jejich miminka a zdravotní služby, které jim budou při porodu poskytovány. Každý rodičovský pár považuje za důležité něco jiného, proto mohou mít porodní plány a porodní přání různý obsah i různou formu.</p>
@@ -23,7 +23,7 @@ export const articleTexts = [
   {
     artTitle: 'Co by mělo osobní porodní přání obsahovat?',
     artImg: 'art02',
-    artUrl: '/article',
+    artUrl: '/co-by-melo-prani-obsahovat',
     artPerex:
       '„Porodní přání“, nebo také „porodní plán“ je nástroj, který můžete použít ke komunikaci s ošetřujícím personálem během přípravy na porod, při porodu a v šestinedělí. Umožní vám přehledně formulovat, jaká jsou Vaše přání a hodnoty a shrne základní informace, které by měla porodní asistentka, lékař, nebo další poskytovatelé zdravotní péče o Vás vědět.',
     artBody: `<p>„Porodní přání“, nebo také „porodní plán“ je nástroj, který můžete použít ke komunikaci s ošetřujícím personálem během přípravy na porod, při porodu a v šestinedělí. Umožní Vám přehledně formulovat, jaká jsou Vaše přání a hodnoty a shrne základní informace, které by měla porodní asistentka, lékař, nebo další poskytovatelé zdravotní péče o Vás vědět. Dobré „porodní přání“ (což je termín, který se v současné době preferuje, spíše než „porodní
@@ -31,7 +31,7 @@ export const articleTexts = [
     porodní přání sestavíte, je dobré absolvovat předporodní kurz a seznámit se možnostmi,
     které máte k dispozici.</p>
  
-    <p>Nad čím se zamyslet:</p>
+    <h3>Nad čím se zamyslet:</h3>
     <ul>
     <li>Kdo bude součástí Vašeho „porodního týmu“? Bude s Vámi partner, dula nebo jiný
     doprovod, chcete mít vlastní porodní asistentku?</li>
@@ -73,7 +73,7 @@ export const articleTexts = [
   {
     artTitle: 'Co si s sebou zabalit do porodnice?',
     artImg: 'art03',
-    artUrl: '/article',
+    artUrl: '/co-si-zabalit-do-porodnice',
     artPerex:
       'Pokud se vám blíží 38. týden těhotenství, a miminko se může kdykoli začít hlásit na svět, je vhodný čas připravit si tašku do porodnice. Možná vás to překvapí, ale doporučujeme vám  připravit si rovnou tři tašky. Jednu s věcmi přímo na porodní sál, kterou pošlete po porodu domů, druhou pro pobyt na oddělení šestinedělí a třetí na cestu z porodnice domů.',
     artBody: `

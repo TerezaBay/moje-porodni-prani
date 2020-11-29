@@ -6,7 +6,7 @@ const ArtPreview = ({ img, title, text, url }) => (
   <div className="preview">
     <div
       className="preview_img"
-      style={{ backgroundImage: `url(../assets/articles/${img}.jpg)` }}
+      style={{ backgroundImage: `url(/assets/articles/${img}.jpg)` }}
     ></div>
     <div className="preview_content">
       <h3 className="preview_name">{title}</h3>
