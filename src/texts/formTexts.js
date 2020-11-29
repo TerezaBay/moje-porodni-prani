@@ -299,7 +299,8 @@ export const formQuest = [
     id: 22,
     quest: 'Odeslání formuláře',
     type: 'checkbox',
-    disclaimer: "Aplikace Moje porodní přání neposkytuje lékařská doporučení. Obsah není určen jako náhrada profesionální zdravotnické péče. K zodpovězení otázek týkajících se těhotenství a porodu vždy vyhledejte radu kvalifikovaného pracovníka.",
+    disclaimer:
+      'Aplikace Moje porodní přání neposkytuje lékařská doporučení. Obsah není určen jako náhrada profesionální zdravotnické péče. K zodpovězení otázek týkajících se těhotenství a porodu vždy vyhledejte radu kvalifikovaného pracovníka.',
     answers: ['Beru na vědomí.'],
   },
 ];

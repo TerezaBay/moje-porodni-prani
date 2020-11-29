@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Input from '../Input/input';
 import './style.css';
 
+import { useFormContext } from '../../utils/formContext.jsx';
+
 const QuestionInput = ({ quest }) => {
-  const [answered, setAnswered] = useState(() =>
-    Array(quest.answers.length).fill(''),
-  );
+  const { formState, setFormState } = useFormContext();
 
   const handleChange = (value, i) => {
-    const newAnswered = [...answered];
+    const newAnswered = [...(formState[quest.id]?.value || [])];
     newAnswered[i] = value;
-    setAnswered(newAnswered);
+
+    setFormState({ type: quest.type, value: newAnswered }, quest.id);
   };
 
   return (
@@ -19,7 +20,7 @@ const QuestionInput = ({ quest }) => {
         <Input
           key={i}
           input={answer}
-          value={answered[i]}
+          value={formState[quest.id]?.value[i] || ''}
           func={(value) => handleChange(value, i)}
         />
       ))}

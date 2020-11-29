@@ -24,7 +24,7 @@ const Question = ({ quest }) => {
 
   return (
     <div className="quest">
-      <h3 className="quest_title">{quest.quest}</h3>
+      <h3 className="quest_title">{`${quest.id + 1}) ${quest.quest}`}</h3>
       {quest.disclaimer ? (
         <p className="disclaimer">{quest.disclaimer}</p>
       ) : null}

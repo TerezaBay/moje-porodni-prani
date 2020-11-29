@@ -7,10 +7,10 @@ const RadioButton = ({ name, func, value, text }) => (
       <input
         type="radio"
         name={name}
-        onChange={(e) => func(e.target.checked)}
-        checked={value}
-        />
-        {text}
+        onChange={(e) => func(e.target.value)}
+        value={value}
+      />
+      {text}
     </label>
   </div>
 );

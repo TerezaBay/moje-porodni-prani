@@ -8,20 +8,23 @@ import './style.css';
 
 import Navbar from './components/Navbar/navbar.jsx';
 import Footer from './components/Footer/footer.jsx';
+import { FormContextProvider } from './utils/formContext';
 
 const App = () => {
   return (
-    <Router>
-      <Navbar />
+    <FormContextProvider>
+      <Router>
+        <Navbar />
 
-      <Switch>
-        {routes.map((route, i) => (
-          <Route key={i} {...route} />
-        ))}
-      </Switch>
+        <Switch>
+          {routes.map((route, i) => (
+            <Route key={i} {...route} />
+          ))}
+        </Switch>
 
-      <Footer copyrightText={home.footerCopyright} links={home.footerLinks} />
-    </Router>
+        <Footer copyrightText={home.footerCopyright} links={home.footerLinks} />
+      </Router>
+    </FormContextProvider>
   );
 };
 
