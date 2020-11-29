@@ -1,13 +1,11 @@
 import React from 'react';
-import { useRouteMatch, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import './style.css';
 
 import FormNav from '../../../components/FormNav/formNav.jsx';
 import { routesForm } from '../../../links.js';
 
 const FormHome = () => {
-  let { path } = useRouteMatch();
-
   return (
     <>
       <FormNav />

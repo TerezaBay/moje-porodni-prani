@@ -2,24 +2,36 @@ import React, { useState } from 'react';
 import './style.css';
 
 import Checkbox from '../../components/Checkbox/checkbox.jsx';
+import { useFormContext } from '../../utils/formContext.jsx';
 
 const QuestionCheckbox = ({ quest }) => {
-  const [checked, setChecked] = useState([]);
+  const { formState, setFormState } = useFormContext();
+
   const [disabled, setDisabled] = useState(false);
 
   const [noPreviousChecked, setNoPreviousChecked] = useState(false);
 
   const handleChange = (value, i) => {
-    const newChecked = [...checked];
+    if (
+      value &&
+      quest.maxChecked &&
+      checked.filter((item) => item).length >= quest.maxChecked
+    ) {
+      alert(`Je možné zaškrtnout pouze ${quest.maxChecked} možnosti.`);
+      return;
+    }
+
+    const newChecked = [...(formState[quest.id]?.value || [])];
     newChecked[i] = value;
-    setChecked(newChecked);
+
+    setFormState({ type: quest.type, value: newChecked }, quest.id);
   };
 
   const handleChangeNoPrevious = (value) => {
     setNoPreviousChecked(value);
     setDisabled(!disabled);
     if (value) {
-      setChecked([]);
+      setFormState({ type: quest.type, value: [] }, quest.id);
     }
   };
 
@@ -30,16 +42,18 @@ const QuestionCheckbox = ({ quest }) => {
           key={i}
           disabled={disabled}
           func={(value) => handleChange(value, i)}
-          value={!!checked[i]}
+          value={!!formState[quest.id]?.value[i]}
           text={answer}
         />
       ))}
-      <Checkbox
-        disabled={false}
-        func={handleChangeNoPrevious}
-        value={noPreviousChecked}
-        text={quest.textDisabled}
-      />
+      {quest.textDisabled ? (
+        <Checkbox
+          disabled={false}
+          func={handleChangeNoPrevious}
+          value={noPreviousChecked}
+          text={quest.textDisabled}
+        />
+      ) : null}
     </>
   );
 };

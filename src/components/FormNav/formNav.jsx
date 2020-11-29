@@ -1,18 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
 
-import { formTitle } from '../../texts/formTexts.js';
+import { formTitleLink } from '../../texts/formTexts.js';
 
 const FormNav = () => (
   <nav className="form-nav">
     <ul className="form-nav_links">
-      <li>
-        {formTitle.map((text, i) => (
-          <a key={i} href="url">
-            {text}
-          </a>
-        ))}
-      </li>
+      {formTitleLink.map((titleLink, i) => (
+        <li key={i}>
+          <Link to={titleLink.link}>{titleLink.title}</Link>
+        </li>
+      ))}
     </ul>
   </nav>
 );

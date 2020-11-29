@@ -1,10 +1,10 @@
 import React from 'react';
-import Input from '../Input/input';
+import TextArea from '../TextArea/textArea';
 import './style.css';
 
 import { useFormContext } from '../../utils/formContext.jsx';
 
-const QuestionInput = ({ quest }) => {
+const QuestionLongTextArea = ({ quest }) => {
   const { formState, setFormState } = useFormContext();
 
   const handleChange = (value, i) => {
@@ -17,15 +17,16 @@ const QuestionInput = ({ quest }) => {
   return (
     <>
       {quest.answers.map((answer, i) => (
-        <Input
+        <TextArea
           key={i}
-          input={answer}
+          text={answer}
           value={formState[quest.id]?.value[i] || ''}
           func={(value) => handleChange(value, i)}
+          maxLength={600}
         />
       ))}
     </>
   );
 };
 
-export default QuestionInput;
+export default QuestionLongTextArea;
