@@ -1,8 +1,10 @@
 import Homepage from './pages/Homepage/homepage.jsx';
 import Info from './pages/Info/info.jsx';
 import Article from './pages/Homepage/homepage.jsx';
-import Form01 from './pages/Form/Form 01/form01.jsx';
-import FormHome from './pages/Form/Form 00 home/formhome.jsx';
+import FormHome from './pages/Form/Form00Home/formHome.jsx';
+import Form01Start from './pages/Form/Form01Start/form01Start.jsx';
+import Form02BasicInfo from './pages/Form/Form02BasicInfo/form02BasicInfo.jsx';
+import Form03BeforeBirth from './pages/Form/Form03BeforeBirth/form03BeforeBirth.jsx';
 
 export const routes = [
   { path: '/', component: Homepage, exact: true },
@@ -17,9 +19,14 @@ export const links = [
   { name: 'Užitečné informace', url: `${routes[2].path}` },
 ];
 
+// musí začínat na formhome/
 export const routesForm = [
-  { path: '/formhome/', component: Form01 },
-  // { path: '/form02', component: Form02 },
-  // { path: '/form', component: Info },
-  // { path: '/form', component: Article },
+  { path: '/formhome/form01Start', component: Form01Start },
+  { path: '/formhome/form02BasicInfo', component: Form02BasicInfo },
+  { path: '/formhome/form03BeforeBirth', component: Form03BeforeBirth },
+  // { path: '/formhome/form', component: Article },
+  // { path: '/formhome/form', component: Info },
+  // { path: '/formhome/form', component: Article },
+  // { path: '/formhome/form', component: Info },
+  // { path: '/formhome/form', component: Article },
 ];

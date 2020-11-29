@@ -1,17 +1,56 @@
-export const formTitle = [
-  'Úvodní informace',
-  'Před porodem',
-  'První doba porodní',
-  'V průběhu porodu',
-  'Po porodu',
-  'V šestinedělí',
-  'Osobní poznámky',
-  'Preference',
-  'Ukončení a odeslání',
+import { routesForm } from '../links.js';
+
+export const formTitleLink = [
+  { title: 'Úvod', link: `${routesForm[0].path}` },
+  { title: 'Osobní informace', link: `${routesForm[1].path}` },
+  { title: 'Před porodem', link: `${routesForm[2].path}` },
+  // { title: 'První doba porodní', link: `${routesForm[3].path}` },
+  // { title: 'V průběhu porodu', link: `${routesForm[4].path}` },
+  // { title: 'Po porodu', link: `${routesForm[5].path}` },
+  // { title: 'V šestinedělí', link: `${routesForm[6].path}` },
+  // { title: 'Osobní poznámky', link: `${routesForm[7].path}` },
+  // { title: 'Preference', link: `${routesForm[8].path}` },
+  // { title: 'Ukončení a odeslání', link: `${routesForm[9].path}` },
 ];
 
 export const formTexts = [
   {
+    title: 'Chci si vytvořit své porodní přání. Ale jak na to? ',
+    text: `<p>Čekají tě otázky týkající se různých fází porodního procesu. Dej si na jejich zodpovězení dostatek času. Pokud budeš nad nějakým bodem váhat nebo ti nebude úplně jasný, přečti si o tématu více na našem blogu, nebo otázku přeskoč a vrať se k ní později. Po zodpovězení všech otázek ti vygenerujeme seznam tvých porodních přání.</p>
+
+    <p>Seznam tvých porodních přání dostane jedinečnou adresu, kterou budeš moci sdílet se svým porodním týmem, partnerem nebo kýmkoli jiným.  Seznam přání si můžeš také vytisknout nebo uložit pro svoji potřebu.</p>
+    
+    <p>Dokud svůj seznam nezveřejníš, nikdo se k němu nedostane.Tvá data jsou v bezpečí. Svá přání můžeš kdykoli změnit a vygenerovat nový seznam.</p>
+    
+    <p>Pamatuj, seznam porodních přání je nástroj, který by měl usnadnit komunikaci potřeb a preferencí mezi rodičkou a personálem porodnice. Platí, že čím je porodní přání stručnější, tím lépe a rychleji mu ostatní porozumí. Vybírej tedy jen ty body, které jsou pro tebe opravdu důležité.</p>`,
+  },
+  {
+    title: 'Tvé porodní přání je hotové!',
+    text: `<p>Skvělé! Na následující adrese:_____ si můžeš prohlédnout seznam svých porodních přání.</p>
+
+    <p>Jak se seznamem dále naložit? Jedinečný odkaz si můžeš uložit do záložek v prohlížeči, nebo si seznam rovnou vytisknout. Odkaz můžeš s kýmkoliv sdílet.</p>
+    
+    <p>Doporučujeme seznam přání předem probrat s personálem v porodnici, kde jsi se rozhodla rodit a ověřit si, zda je v souladu s jejich praxí. Pokud plánuješ mít svou porodní asistentku nebo dulu, seznam se svým přáním i je.</p>
+    
+    <p>Udělej si tři kopie dokončeného textu. Jednu ulož do tašky k porodu, abys ji měla po ruce, druhou dej partnerovi a třetí bude založena do lékařské zprávy a bude ji mít k dispozici ošetřující personál.</p>`,
+  },
+];
+
+export const formQuest = [
+  {
+    id: 0,
+    quest: 'Vyplň své osobní údaje:',
+    type: 'input',
+    answers: ['Jméno:', 'Příjmení:', 'Odhadovaný termín porodu:'],
+  },
+  {
+    id: 1,
+    quest: 'Bude tě k porodu někdo doprovázet? Pokud ano, vyplň jméno:',
+    type: 'input',
+    answers: ['partner:', 'dula:', 'porodní asistentka:', 'jiný doprovod:'],
+  },
+  {
+    id: 2,
     quest: 'Trpíš následujícím? Pokud ano, zaškrtni:',
     type: 'checkbox',
     answers: [
@@ -26,8 +65,15 @@ export const formTexts = [
     textDisabled: 'nic z výše uvedeného',
   },
   {
+    id: 3,
     quest:
-      'Pokud budeš ty i dítě v pořádku, je tebe před porodem důležité něco z následujícího?',
+      'Máš ty, nebo tvůj partner nějaká specifická (kulturní, náboženská) přání?',
+    type: 'input',
+    answers: ['Dolplň'],
+  },
+  {
+    id: 4,
+    quest: 'Pokud budeš ty i dítě v pořádku, co je tebe před porodem důležité?',
     type: 'checkbox',
     answers: [
       'vyčkat na přirozený začátek porodu bez ohledu na vypočítaný termín porodu',
@@ -37,6 +83,7 @@ export const formTexts = [
     textDisabled: 'nic z výše uvedeného',
   },
   {
+    id: 5,
     quest: 'Je při příjmu do porodnice pro tebe důležité něco z následujícího?',
     type: 'checkbox',
     answers: [
@@ -49,6 +96,7 @@ export const formTexts = [
     textDisabled: 'nemám žádná zvláštní přání',
   },
   {
+    id: 6,
     quest: 'Během první doby porodní si přeji:',
     type: 'checkbox',
     answers: [
@@ -60,6 +108,7 @@ export const formTexts = [
     textDisabled: 'nic z výše uvedeného',
   },
   {
+    id: 7,
     question:
       'Jaké nefarmakologické metody bys ráda využila k tlumení bolesti? ',
     type: 'checkbox',
@@ -75,6 +124,7 @@ export const formTexts = [
     textDisabled: 'nemám žádnou preferenci',
   },
   {
+    id: 8,
     question:
       'Jsi otevřená užití nějakých farmakologických prostředků k tlumení bolesti?',
     type: 'checkbox',
@@ -86,6 +136,7 @@ export const formTexts = [
     textDisabled: 'nic z výše uvedeného',
   },
   {
+    id: 9,
     question: 'V průběhu porodu si přeji: ',
     type: 'checkbox',
     answers: [
@@ -100,6 +151,7 @@ export const formTexts = [
     textDisabled: 'nic z výše uvedeného',
   },
   {
+    id: 10,
     question: 'Pokud by bylo nutné podstoupit císařský řez, tak bys chtěla: ',
     type: 'checkbox',
     answers: [
@@ -113,6 +165,7 @@ export const formTexts = [
     textDisabled: 'nic z výše uvedeného',
   },
   {
+    id: 11,
     question: 'Bezprostředně po porodu bych si přála:',
     type: 'checkbox',
     answers: [
@@ -130,12 +183,14 @@ export const formTexts = [
     textDisabled: 'nic z výše uvedeného',
   },
   {
+    id: 12,
     question: 'Co bys sis přála udělat s placentou?',
     type: 'checkbox',
     answers: 'placentu prosím:',
     textDisabled: 'nic',
   },
   {
+    id: 13,
     question:
       'Tyto procedury jsou obvykle praktikovány po porodu dítěte. Zaškrtni ty, které NECHCEŠ:',
     type: 'checkbox',
@@ -149,6 +204,7 @@ export const formTexts = [
     textDisabled: 'nevadí mi nic z výše uvedeného',
   },
   {
+    id: 14,
     question:
       'V případě, že se tvému miminku nebude dařit dobře, je pro tebe důležité následující:',
     type: 'checkbox',
@@ -161,6 +217,7 @@ export const formTexts = [
     textDisabled: 'nic z výše uvedeného',
   },
   {
+    id: 15,
     question: 'Kdy a jak chceš začít s kojením svého dítěte?',
     type: 'checkbox',
     answers: [
@@ -171,6 +228,7 @@ export const formTexts = [
     textDisabled: 'nic z výše uvedeného',
   },
   {
+    id: 16,
     question: 'Chceš být s miminkem v jednom pokoji? ',
     type: 'checkbox',
     answers: [
@@ -183,6 +241,7 @@ export const formTexts = [
     textDisabled: 'nic z výše uvedeného',
   },
   {
+    id: 17,
     question: 'V následné péči o miminko je pro mne důležité:',
     type: 'checkbox',
     answers: [
@@ -192,6 +251,7 @@ export const formTexts = [
     textDisabled: 'nic z výše uvedeného',
   },
   {
+    id: 18,
     question: 'Jak dlouho si přeješ zůstat v nemocnici po porodu? ',
     type: 'checkbox',
     answers: [
@@ -203,22 +263,23 @@ export const formTexts = [
     textDisabled: 'nic z výše uvedeného',
   },
   {
-    question:
+    id: 19,
+    quest:
       'Zde můžeš napsat, zda a jaké kurzy předporodní kurzy jsi absolvovala:',
     type: 'input',
-    answers: 'Na porod jsem se připravovala:',
-    textDisabled: '',
+    labels: ['Na porod jsem se připravovala: '],
   },
   {
-    question: 'Osobní úvod',
+    id: 20,
+    quest: 'Osobní úvod',
     type: 'input',
-    answers: [
+    labels: [
       'Zde je prostor pro tvůj osobní úvod porodního přání. Napiš zdravotnickému týmu to nejdůležitější, co ti leží na srdci. Můžeš využít naši předlohu, nebo si text zformulovat úplně sama. Pamatuj ale na to, že čím je text stručnější, tím lépe a rychleji mu ostatní porozumí.',
       'Chtěla bych vám předem ze srdce poděkovat, protože věřím, že se vždy snažíte dělat to nejlepší pro mne a mé dítě. Čekám své první dítě. Chápu, že ne vždy se věci daří tak, jak si je člověk naplánuje - a u porodu to platí dvojnásob. Věřím tomu, že mi trpělivě vysvětlíte jednotlivé zákroky a potenciální problémy. Děkuji, že použijete předložené preference při vedení mého porodního procesu.',
     ],
-    textDisabled: '',
   },
   {
+    id: 21,
     question:
       'Vyber možnosti, které považuješ pro tvůj porodní zážitek za zásadní. Ve výstupu budou tato přání zvýrazněna. Vybrat můžeš maximálně tři možnosti.',
     type: 'checkbox',
