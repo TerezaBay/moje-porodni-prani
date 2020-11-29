@@ -3,7 +3,7 @@ export const picLinkTexts = [
     linkTitle: 'Aperio',
     linkImg: 'link01.jpg',
     linkText:
-      'Oblíbené kurzy přípravy na porod a rodičovství, bezplatná psychologická a právní poradna pro rodiče, průvodce zákony zdarma ke stažení a mnoho dalšího.',
+      'Váš průvodce zdravým rodičovstvím. Oblíbené kurzy Hladký porod, bezplatná psychologická a právní poradna a mnoho dalšího.',
     linkUrl: 'https://aperio.cz/',
   },
 
@@ -11,7 +11,7 @@ export const picLinkTexts = [
     linkTitle: 'Průvodce porodnicemi',
     linkImg: 'link02.jpg',
     linkText:
-      'Průvodce porodnicemi pomáhá nastávajícím rodičům vybrat si porodnici. Možnost porovnat porodnice mezi sebou. Obsahuje také zkušenosti žen, které v porodnici rodily.',
+      'Porovnejte informace, které o sobě poskytují porodnice se zkuzkušenosti žen, které v porodnici rodily.',
     linkUrl: 'https://pruvodce-porodnicemi.aperio.cz/',
   },
 
@@ -43,15 +43,15 @@ export const picLinkTexts = [
   {
     linkTitle: 'Česká asociace dul',
     linkImg: 'link06.jpg',
-    linkText:
-      'Naším posláním je poskytovat laskavou podporu ženám a jejich rodinám během těhotenství, porodu a počátků mateřství.  (kdo je dula a jak pomáhá u porodu, seznam dul)',
+    linkText: 'Kdo je dula a jak pomáhá u porodu? Jak si vybrat dulu?',
     linkUrl: 'https://www.duly.cz/',
   },
 
   {
     linkTitle: 'České duly',
     linkImg: 'link05.jpg',
-    linkText: 'Stránky Českých dul. Seznam dul v jednotlivých regionech. ',
+    linkText:
+      'Stránky Českých dul. Obsahují také seznam dul v jednotlivých regionech. ',
     linkUrl: 'http://mojedula.cz/',
   },
 
@@ -59,7 +59,7 @@ export const picLinkTexts = [
     linkTitle: 'kojeni.cz',
     linkImg: 'link09.jpg',
     linkText:
-      'Web Kojení.cz provozuje Laktační liga. Laktační liga je nezisková organizace, jejímž hlavním posláním je podpora, osvěta a propagace kojení.',
+      'Web Kojení.cz provozuje Laktační liga. Informace o kojení a seznam laktačních poradkyň.',
     linkUrl: 'http://www.kojeni.cz/',
   },
 ];

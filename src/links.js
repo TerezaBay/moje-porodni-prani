@@ -8,7 +8,6 @@ export const routes = [
   { path: '/', component: Homepage, exact: true },
   { path: '/formhome', component: FormHome },
   { path: '/info', component: Info },
-  { path: '/article', component: Article },
 ];
 
 export const links = [

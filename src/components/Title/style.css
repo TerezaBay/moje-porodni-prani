@@ -3,6 +3,11 @@
   padding: 2.5rem;
 }
 
+.title-div_short {
+  background-color: #f6bd09;
+  padding: 2.5rem;
+}
+
 .title-text {
   color: white;
   padding-right: 1rem;
@@ -22,6 +27,8 @@
   }
 
   .title-div_short {
+    background-color: #f6bd09;
+    padding: 2.5rem;
     margin-right: 50%;
   }
 }
