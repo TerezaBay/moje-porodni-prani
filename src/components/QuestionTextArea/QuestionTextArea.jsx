@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Input from '../Input/input';
+import TextArea from '../TextArea/textArea';
 import './style.css';
 
-const QuestionInput = ({ quest }) => {
+const QuestionTextArea = ({ quest }) => {
   const [answered, setAnswered] = useState(() =>
     Array(quest.answers.length).fill(''),
   );
@@ -16,15 +16,16 @@ const QuestionInput = ({ quest }) => {
   return (
     <>
       {quest.answers.map((answer, i) => (
-        <Input
+        <TextArea
           key={i}
-          input={answer}
+          text={answer}
           value={answered[i]}
           func={(value) => handleChange(value, i)}
+          maxLength={150}
         />
       ))}
     </>
   );
 };
 
-export default QuestionInput;
+export default QuestionTextArea;

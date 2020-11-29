@@ -6,7 +6,7 @@ import './style.css';
 
 const Form02BasicInfo = () => (
   <main className="form_main">
-    <Title titleClass="title-div" titleText={formTitleLink[1]} />
+    <Title titleClass="title-div" titleText={formTitleLink[1].title} />
     <form className="form">
       {formQuest.slice(0, 4).map((question, i) => (
         <Question key={i} quest={question} />

@@ -1,21 +1,20 @@
-import { routesForm } from '../links.js';
-
 export const formTitleLink = [
-  { title: 'Úvod', link: `${routesForm[0].path}` },
-  { title: 'Osobní informace', link: `${routesForm[1].path}` },
-  { title: 'Před porodem', link: `${routesForm[2].path}` },
-  // { title: 'První doba porodní', link: `${routesForm[3].path}` },
-  // { title: 'V průběhu porodu', link: `${routesForm[4].path}` },
-  // { title: 'Po porodu', link: `${routesForm[5].path}` },
-  // { title: 'V šestinedělí', link: `${routesForm[6].path}` },
-  // { title: 'Osobní poznámky', link: `${routesForm[7].path}` },
-  // { title: 'Preference', link: `${routesForm[8].path}` },
-  // { title: 'Ukončení a odeslání', link: `${routesForm[9].path}` },
+  { title: 'Úvod', link: '/formhome/' },
+  { title: 'Osobní informace', link: '/formhome/form02BasicInfo' },
+  { title: 'Před porodem', link: '/formhome/form03BeforeBirth' },
+  { title: 'První doba porodní', link: '/formhome/form04PreLabour' },
+  { title: 'V průběhu porodu', link: '/formhome/form05DuringLabour' },
+  { title: 'Po porodu', link: '/formhome/form06AfterBirth' },
+  { title: 'V šestinedělí', link: '/formhome/form07Puerperium' },
+  { title: 'Osobní poznámky', link: '/formhome/form08PersonalNotes' },
+  { title: 'Preference', link: '/formhome/form09Preferences' },
+  { title: 'Ukončení a odeslání', link: '/formhome/form10Submit' },
+  { title: 'Konec', link: '/formhome/form11End' },
 ];
 
 export const formTexts = [
   {
-    title: 'Chci si vytvořit své porodní přání. Ale jak na to? ',
+    title: 'Chci si vytvořit své porodní přání. Ale jak na to?',
     text: `<p>Čekají tě otázky týkající se různých fází porodního procesu. Dej si na jejich zodpovězení dostatek času. Pokud budeš nad nějakým bodem váhat nebo ti nebude úplně jasný, přečti si o tématu více na našem blogu, nebo otázku přeskoč a vrať se k ní později. Po zodpovězení všech otázek ti vygenerujeme seznam tvých porodních přání.</p>
 
     <p>Seznam tvých porodních přání dostane jedinečnou adresu, kterou budeš moci sdílet se svým porodním týmem, partnerem nebo kýmkoli jiným.  Seznam přání si můžeš také vytisknout nebo uložit pro svoji potřebu.</p>
@@ -41,7 +40,11 @@ export const formQuest = [
     id: 0,
     quest: 'Vyplň své osobní údaje:',
     type: 'input',
-    answers: ['Jméno:', 'Příjmení:', 'Odhadovaný termín porodu:'],
+    answers: [
+      'Jméno:',
+      'Příjmení:',
+      { text: 'Odhadovaný termín porodu:', type: 'date' },
+    ],
   },
   {
     id: 1,
@@ -68,7 +71,7 @@ export const formQuest = [
     id: 3,
     quest:
       'Máš ty, nebo tvůj partner nějaká specifická (kulturní, náboženská) přání?',
-    type: 'input',
+    type: 'textArea',
     answers: ['Dolplň'],
   },
   {
@@ -109,8 +112,7 @@ export const formQuest = [
   },
   {
     id: 7,
-    question:
-      'Jaké nefarmakologické metody bys ráda využila k tlumení bolesti? ',
+    quest: 'Jaké nefarmakologické metody bys ráda využila k tlumení bolesti? ',
     type: 'checkbox',
     answers: [
       'vanu nebo sprchu',
@@ -125,7 +127,7 @@ export const formQuest = [
   },
   {
     id: 8,
-    question:
+    quest:
       'Jsi otevřená užití nějakých farmakologických prostředků k tlumení bolesti?',
     type: 'checkbox',
     answers: [
@@ -137,7 +139,7 @@ export const formQuest = [
   },
   {
     id: 9,
-    question: 'V průběhu porodu si přeji: ',
+    quest: 'V průběhu porodu si přeji: ',
     type: 'checkbox',
     answers: [
       'vyhnout se řízenému tlačení a pokud možno tlačit spontánně',
@@ -152,7 +154,7 @@ export const formQuest = [
   },
   {
     id: 10,
-    question: 'Pokud by bylo nutné podstoupit císařský řez, tak bys chtěla: ',
+    quest: 'Pokud by bylo nutné podstoupit císařský řez, tak bys chtěla: ',
     type: 'checkbox',
     answers: [
       'před zahájením operace moment o samotě se svým doprovodem',
@@ -166,7 +168,7 @@ export const formQuest = [
   },
   {
     id: 11,
-    question: 'Bezprostředně po porodu bych si přála:',
+    quest: 'Bezprostředně po porodu bych si přála:',
     type: 'checkbox',
     answers: [
       'přiložit miminko na mou hruď ihned po porodu',
@@ -184,14 +186,14 @@ export const formQuest = [
   },
   {
     id: 12,
-    question: 'Co bys sis přála udělat s placentou?',
-    type: 'checkbox',
-    answers: 'placentu prosím:',
-    textDisabled: 'nic',
+    quest: 'Co bys sis přála udělat s placentou?',
+    type: 'input',
+    answers: ['Doplň své přání. Pokud žádné nemáš, nech pole prázdné.'],
+    textDisabled: '',
   },
   {
     id: 13,
-    question:
+    quest:
       'Tyto procedury jsou obvykle praktikovány po porodu dítěte. Zaškrtni ty, které NECHCEŠ:',
     type: 'checkbox',
     answers: [
@@ -205,7 +207,7 @@ export const formQuest = [
   },
   {
     id: 14,
-    question:
+    quest:
       'V případě, že se tvému miminku nebude dařit dobře, je pro tebe důležité následující:',
     type: 'checkbox',
     answers: [
@@ -218,7 +220,7 @@ export const formQuest = [
   },
   {
     id: 15,
-    question: 'Kdy a jak chceš začít s kojením svého dítěte?',
+    quest: 'Kdy a jak chceš začít s kojením svého dítěte?',
     type: 'checkbox',
     answers: [
       'po porodu, jak jen to bude možné',
@@ -229,8 +231,8 @@ export const formQuest = [
   },
   {
     id: 16,
-    question: 'Chceš být s miminkem v jednom pokoji? ',
-    type: 'checkbox',
+    quest: 'Chceš být s miminkem v jednom pokoji? ',
+    type: 'radioButton',
     answers: [
       'ano stále',
       'ano během dne',
@@ -242,7 +244,7 @@ export const formQuest = [
   },
   {
     id: 17,
-    question: 'V následné péči o miminko je pro mne důležité:',
+    quest: 'V následné péči o miminko je pro mne důležité:',
     type: 'checkbox',
     answers: [
       'nedávat dítěti dudlík',
@@ -252,8 +254,8 @@ export const formQuest = [
   },
   {
     id: 18,
-    question: 'Jak dlouho si přeješ zůstat v nemocnici po porodu? ',
-    type: 'checkbox',
+    quest: 'Jak dlouho si přeješ zůstat v nemocnici po porodu? ',
+    type: 'radioButton',
     answers: [
       'tak dlouho, jak jen to bude možné',
       'tak krátce, jak jen to bude možné',
@@ -266,23 +268,24 @@ export const formQuest = [
     id: 19,
     quest:
       'Zde můžeš napsat, zda a jaké kurzy předporodní kurzy jsi absolvovala:',
-    type: 'input',
-    labels: ['Na porod jsem se připravovala: '],
+    type: 'textArea',
+    answers: ['Na porod jsem se připravovala: '],
   },
   {
     id: 20,
     quest: 'Osobní úvod',
-    type: 'input',
-    labels: [
-      'Zde je prostor pro tvůj osobní úvod porodního přání. Napiš zdravotnickému týmu to nejdůležitější, co ti leží na srdci. Můžeš využít naši předlohu, nebo si text zformulovat úplně sama. Pamatuj ale na to, že čím je text stručnější, tím lépe a rychleji mu ostatní porozumí.',
-      'Chtěla bych vám předem ze srdce poděkovat, protože věřím, že se vždy snažíte dělat to nejlepší pro mne a mé dítě. Čekám své první dítě. Chápu, že ne vždy se věci daří tak, jak si je člověk naplánuje - a u porodu to platí dvojnásob. Věřím tomu, že mi trpělivě vysvětlíte jednotlivé zákroky a potenciální problémy. Děkuji, že použijete předložené preference při vedení mého porodního procesu.',
+    type: 'longTextArea',
+    answers: [
+      `<p>Zde je prostor pro tvůj osobní úvod porodního přání. Napiš zdravotnickému týmu to nejdůležitější, co ti leží na srdci. Můžeš využít naši předlohu, nebo si text zformulovat úplně sama. Pamatuj ale na to, že čím je text stručnější, tím lépe a rychleji mu ostatní porozumí.</p>
+      <p>Chtěla bych vám předem ze srdce poděkovat, protože věřím, že se vždy snažíte dělat to nejlepší pro mne a mé dítě. Čekám své první dítě. Chápu, že ne vždy se věci daří tak, jak si je člověk naplánuje - a u porodu to platí dvojnásob. Věřím tomu, že mi trpělivě vysvětlíte jednotlivé zákroky a potenciální problémy. Děkuji, že použijete předložené preference při vedení mého porodního procesu.</p>`,
     ],
   },
   {
     id: 21,
-    question:
+    quest:
       'Vyber možnosti, které považuješ pro tvůj porodní zážitek za zásadní. Ve výstupu budou tato přání zvýrazněna. Vybrat můžeš maximálně tři možnosti.',
     type: 'checkbox',
+    maxChecked: 3,
     answers: [
       'Ráda bych měla přirozený porod bez vnějších zásahů, pokud nedojde k závažným komplikacím.',
       'Informujte mě, prosím, průběžně o postupu porodu a o tom, co bude následovat.',
@@ -291,5 +294,12 @@ export const formQuest = [
       'Přeji si, aby o mne během porodu pečoval co nejmenší počet zdravotníků.',
     ],
     textDisabled: 'Nic z výše uvedeného.',
+  },
+  {
+    id: 22,
+    quest: 'Odeslání formuláře',
+    type: 'checkbox',
+    disclaimer: "Aplikace Moje porodní přání neposkytuje lékařská doporučení. Obsah není určen jako náhrada profesionální zdravotnické péče. K zodpovězení otázek týkajících se těhotenství a porodu vždy vyhledejte radu kvalifikovaného pracovníka.",
+    answers: ['Beru na vědomí.'],
   },
 ];

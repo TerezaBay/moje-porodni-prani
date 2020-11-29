@@ -10,6 +10,14 @@ const QuestionCheckbox = ({ quest }) => {
   const [noPreviousChecked, setNoPreviousChecked] = useState(false);
 
   const handleChange = (value, i) => {
+    if (
+      value &&
+      quest.maxChecked &&
+      checked.filter((item) => item).length >= quest.maxChecked
+    ) {
+      alert(`Je možné zaškrtnout pouze ${quest.maxChecked} možnosti.`);
+      return;
+    }
     const newChecked = [...checked];
     newChecked[i] = value;
     setChecked(newChecked);
@@ -34,12 +42,14 @@ const QuestionCheckbox = ({ quest }) => {
           text={answer}
         />
       ))}
-      <Checkbox
-        disabled={false}
-        func={handleChangeNoPrevious}
-        value={noPreviousChecked}
-        text={quest.textDisabled}
-      />
+      {quest.textDisabled ? (
+        <Checkbox
+          disabled={false}
+          func={handleChangeNoPrevious}
+          value={noPreviousChecked}
+          text={quest.textDisabled}
+        />
+      ) : null}
     </>
   );
 };
