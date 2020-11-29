@@ -7,11 +7,8 @@ import { useFormContext } from '../../utils/formContext.jsx';
 const QuestionRadioButton = ({ quest }) => {
   const { formState, setFormState } = useFormContext();
 
-  const handleChange = (value, i) => {
-    const newChecked = [...(formState[quest.id]?.value || [])];
-    newChecked[i] = value;
-
-    setFormState({ type: quest.type, value: newChecked }, quest.id);
+  const handleChange = (value) => {
+    setFormState({ type: quest.type, value: value }, quest.id);
   };
 
   return (
@@ -20,8 +17,9 @@ const QuestionRadioButton = ({ quest }) => {
         <RadioButton
           key={i}
           name={`radio-${quest.id}`}
-          func={(value) => handleChange(value, i)}
-          value={formState[quest.id]?.value[i] || ''}
+          func={(value) => handleChange(value)}
+          value={i}
+          checked={formState[quest.id]?.value === String(i)}
           text={answer}
         />
       ))}
