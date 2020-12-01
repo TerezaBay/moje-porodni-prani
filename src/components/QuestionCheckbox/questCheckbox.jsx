@@ -7,9 +7,14 @@ import { useFormContext } from '../../utils/formContext.jsx';
 const QuestionCheckbox = ({ quest }) => {
   const { formState, setFormState } = useFormContext();
 
-  const [disabled, setDisabled] = useState(false);
+  const noPreviousCheckedDefault =
+    typeof formState[quest.id] === 'undefined'
+      ? false
+      : formState[quest.id].value.length === 0;
 
-  const [noPreviousChecked, setNoPreviousChecked] = useState(false);
+  const [noPreviousChecked, setNoPreviousChecked] = useState(
+    noPreviousCheckedDefault
+  );
 
   const handleChange = (value, i) => {
     if (
@@ -25,14 +30,20 @@ const QuestionCheckbox = ({ quest }) => {
     const newChecked = [...(formState[quest.id]?.value || [])];
     newChecked[i] = value;
 
-    setFormState({ type: quest.type, value: newChecked }, quest.id);
+    setFormState(
+      { type: quest.type, value: newChecked, noPrevious: false },
+      quest.id
+    );
   };
 
   const handleChangeNoPrevious = (value) => {
     setNoPreviousChecked(value);
-    setDisabled(!disabled);
+
     if (value) {
-      setFormState({ type: quest.type, value: [] }, quest.id);
+      setFormState(
+        { type: quest.type, value: [], noPrevious: value },
+        quest.id
+      );
     }
   };
 
@@ -41,7 +52,7 @@ const QuestionCheckbox = ({ quest }) => {
       {quest.answers.map((answer, i) => (
         <Checkbox
           key={i}
-          disabled={disabled}
+          disabled={noPreviousChecked}
           func={(value) => handleChange(value, i)}
           value={!!formState[quest.id]?.value[i]}
           text={answer}

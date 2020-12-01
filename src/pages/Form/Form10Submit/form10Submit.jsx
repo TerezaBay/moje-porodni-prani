@@ -2,14 +2,15 @@ import React from 'react';
 import Question from '../../../components/Question/question.jsx';
 import Title from '../../../components/Title/title.jsx';
 import { formQuest, formTitleLink } from '../../../texts/formTexts.js';
-import { useFormContext } from '../../../utils/formContext.jsx';
-import { createFormContextValue } from '../../../utils/formContext.jsx';
-
-import '../style.css';
+import './style.css';
+import { useFormContext, isFormValid } from '../../../utils/formContext.jsx';
 
 const Form10Submit = () => {
+  const { formState } = useFormContext();
+
   const handleSubmit = (e) => {
-} 
+    console.log('isFormValid', isFormValid(formState)); // TODO remove when this function is finished
+  };
 
   return (
     <main className="form_main">

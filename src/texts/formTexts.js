@@ -49,6 +49,7 @@ export const formQuest = [
     quest: 'Bude tě k porodu někdo doprovázet? Pokud ano, vyplň jméno:',
     type: 'input',
     answers: ['partner:', 'dula:', 'porodní asistentka:', 'jiný doprovod:'],
+    isOptional: true,
   },
   {
     id: 2,
@@ -71,6 +72,7 @@ export const formQuest = [
       'Máš ty, nebo tvůj partner nějaká specifická (kulturní, náboženská) přání?',
     type: 'textArea',
     answers: ['Dolplň'],
+    isOptional: true,
   },
   {
     id: 4,
@@ -188,6 +190,7 @@ export const formQuest = [
     type: 'input',
     answers: ['Doplň své přání. Pokud žádné nemáš, nech pole prázdné.'],
     textDisabled: '',
+    isOptional: true,
   },
   {
     id: 13,
@@ -268,6 +271,7 @@ export const formQuest = [
       'Zde můžeš napsat, zda a jaké kurzy předporodní kurzy jsi absolvovala:',
     type: 'textArea',
     answers: ['Na porod jsem se připravovala: '],
+    isOptional: true,
   },
   {
     id: 20,
@@ -300,5 +304,6 @@ export const formQuest = [
     disclaimer:
       'Aplikace Moje porodní přání neposkytuje lékařská doporučení. Obsah není určen jako náhrada profesionální zdravotnické péče. K zodpovězení otázek týkajících se těhotenství a porodu vždy vyhledejte radu kvalifikovaného pracovníka.',
     answers: ['Beru na vědomí.'],
+    requiredCheckedAll: true,
   },
 ];
