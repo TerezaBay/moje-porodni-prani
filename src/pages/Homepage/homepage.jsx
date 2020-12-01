@@ -39,7 +39,7 @@ const Homepage = () => (
       <section className="section_preview">
         <h2 className="preview_title">{home.previewTitle}</h2>
         <div className="preview_container">
-          {articleTexts.map((article) => (
+          {articleTexts.slice(0, 2).map((article) => (
             <ArtPreview
               key={article.artTitle}
               title={article.artTitle}

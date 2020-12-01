@@ -15,23 +15,21 @@ export const formTitleLink = [
 export const formTexts = [
   {
     title: 'Chci si vytvořit své porodní přání. Ale jak na to?',
-    text: `<p>Čekají tě otázky týkající se různých fází porodního procesu. Dej si na jejich zodpovězení dostatek času. Pokud budeš nad nějakým bodem váhat nebo ti nebude úplně jasný, přečti si o tématu více na našem blogu, nebo otázku přeskoč a vrať se k ní později. Po zodpovězení všech otázek ti vygenerujeme seznam tvých porodních přání.</p>
-
-    <p>Seznam tvých porodních přání dostane jedinečnou adresu, kterou budeš moci sdílet se svým porodním týmem, partnerem nebo kýmkoli jiným.  Seznam přání si můžeš také vytisknout nebo uložit pro svoji potřebu.</p>
-    
-    <p>Dokud svůj seznam nezveřejníš, nikdo se k němu nedostane.Tvá data jsou v bezpečí. Svá přání můžeš kdykoli změnit a vygenerovat nový seznam.</p>
-    
-    <p>Pamatuj, seznam porodních přání je nástroj, který by měl usnadnit komunikaci potřeb a preferencí mezi rodičkou a personálem porodnice. Platí, že čím je porodní přání stručnější, tím lépe a rychleji mu ostatní porozumí. Vybírej tedy jen ty body, které jsou pro tebe opravdu důležité.</p>`,
+    text: [
+      'Čekají tě otázky týkající se různých fází porodního procesu. Dej si na jejich zodpovězení dostatek času. Pokud budeš nad nějakým bodem váhat nebo ti nebude úplně jasný, přečti si o tématu více na našem blogu, nebo otázku přeskoč a vrať se k ní později. Po zodpovězení všech otázek ti vygenerujeme seznam tvých porodních přání.',
+      'Seznam tvých porodních přání dostane jedinečnou adresu, kterou budeš moci sdílet se svým porodním týmem, partnerem nebo kýmkoli jiným.  Seznam přání si můžeš také vytisknout nebo uložit pro svoji potřebu.',
+      'Dokud svůj seznam nezveřejníš, nikdo se k němu nedostane.Tvá data jsou v bezpečí. Svá přání můžeš kdykoli změnit a vygenerovat nový seznam.',
+      'Pamatuj, seznam porodních přání je nástroj, který by měl usnadnit komunikaci potřeb a preferencí mezi rodičkou a personálem porodnice. Platí, že čím je porodní přání stručnější, tím lépe a rychleji mu ostatní porozumí. Vybírej tedy jen ty body, které jsou pro tebe opravdu důležité.',
+    ],
   },
   {
     title: 'Tvé porodní přání je hotové!',
-    text: `<p>Skvělé! Na následující adrese:_____ si můžeš prohlédnout seznam svých porodních přání.</p>
-
-    <p>Jak se seznamem dále naložit? Jedinečný odkaz si můžeš uložit do záložek v prohlížeči, nebo si seznam rovnou vytisknout. Odkaz můžeš s kýmkoliv sdílet.</p>
-    
-    <p>Doporučujeme seznam přání předem probrat s personálem v porodnici, kde jsi se rozhodla rodit a ověřit si, zda je v souladu s jejich praxí. Pokud plánuješ mít svou porodní asistentku nebo dulu, seznam se svým přáním i je.</p>
-    
-    <p>Udělej si tři kopie dokončeného textu. Jednu ulož do tašky k porodu, abys ji měla po ruce, druhou dej partnerovi a třetí bude založena do lékařské zprávy a bude ji mít k dispozici ošetřující personál.</p>`,
+    text: [
+      'Skvělé! Na následující adrese:_____ si můžeš prohlédnout seznam svých porodních přání.',
+      'Jak se seznamem dále naložit? Jedinečný odkaz si můžeš uložit do záložek v prohlížeči, nebo si seznam rovnou vytisknout. Odkaz můžeš s kýmkoliv sdílet.',
+      'Doporučujeme seznam přání předem probrat s personálem v porodnici, kde jsi se rozhodla rodit a ověřit si, zda je v souladu s jejich praxí. Pokud plánuješ mít svou porodní asistentku nebo dulu, seznam se svým přáním i je.',
+      'Udělej si tři kopie dokončeného textu. Jednu ulož do tašky k porodu, abys ji měla po ruce, druhou dej partnerovi a třetí bude založena do lékařské zprávy a bude ji mít k dispozici ošetřující personál.',
+    ],
   },
 ];
 

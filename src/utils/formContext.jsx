@@ -10,7 +10,7 @@ const FormContext = createContext(
     formState: initialFormState,
     setFormState: () =>
       console.error('You are using FormContext without FormContextProvider!'),
-  })
+  }),
 );
 
 export function useFormContext() {
@@ -31,7 +31,7 @@ export function FormContextProvider({ children }) {
   );
 }
 
-function createFormContextValue({ formState, setFormState }) {
+export function createFormContextValue({ formState, setFormState }) {
   return {
     formState,
     setFormState: (value, i) => {
@@ -45,3 +45,4 @@ function createFormContextValue({ formState, setFormState }) {
     },
   };
 }
+

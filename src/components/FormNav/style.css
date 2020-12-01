@@ -1,12 +1,13 @@
 .form-nav {
   background-color: #aeaebe;
-  height: 100vh;
-  width: 16rem;
+  height: 100%;
+  width: 18rem;
   position: fixed;
 }
 
 .form-nav_links {
-  padding-top: 10rem;
+  margin: 0;
+  padding: 12rem 0 0 3rem;
 }
 
 .form-nav_links li {
@@ -15,4 +16,13 @@
 
 .form-nav_links a {
   display: block;
+  font-family: 'Lora', serif;
+  font-size: 20px;
+  max-width: 800px;
+  color: white;
+  text-decoration: none;
+}
+
+.form-nav_links a:focus, .form-nav_links a:hover {
+  color: #89455D;
 }

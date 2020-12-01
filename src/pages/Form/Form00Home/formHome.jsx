@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import './style.css';
+import '../style.css';
 
 import FormNav from '../../../components/FormNav/formNav.jsx';
 import { routesForm } from '../../../links.js';

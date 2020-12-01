@@ -15,7 +15,8 @@ const QuestionCheckbox = ({ quest }) => {
     if (
       value &&
       quest.maxChecked &&
-      checked.filter((item) => item).length >= quest.maxChecked
+      formState[quest.id]?.value.filter((item) => item).length >=
+        quest.maxChecked
     ) {
       alert(`Je možné zaškrtnout pouze ${quest.maxChecked} možnosti.`);
       return;

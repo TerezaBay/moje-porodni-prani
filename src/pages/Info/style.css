@@ -1,0 +1,40 @@
+.info_main {
+  margin-top: 4rem;
+}
+
+.info_main .title-div {
+  margin: 4rem 0;
+}
+
+.info_main .preview {
+  box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 768px) {
+  .info_main {
+    margin-top: 10rem;
+  }
+
+  .info_main .section_quote {
+    margin: 6rem 0;
+  }
+
+  .info_main .title-div {
+    margin-right: 30%;
+    margin-bottom: 6rem;
+  }
+
+  .info_main .title-div_short {
+    margin-right: 50%;
+  }
+}
+
+@media (min-width: 960px) {
+  .info_main .articles_container {
+    padding: 0 1rem;
+  }
+
+  .picLink_container {
+    padding: 0 1rem;
+  }
+}

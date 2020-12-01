@@ -1,0 +1,25 @@
+/* toto bude vesměs platit pro více jak 960 px */
+
+.form_main {
+  padding-top: 10rem;
+}
+
+.formtext_container {
+  margin-top: 5rem;
+  margin-left: 20rem;
+  /* dořešit po routeru s meníčkem position fixed */
+}
+
+.form_main .title-div {
+  margin-left: 15rem;
+  margin-right: 40%;
+}
+
+.form {
+  margin-top: 5rem;
+  margin-left: 20rem;
+}
+
+.formtext p {
+  margin: 0 0 1em;
+}
