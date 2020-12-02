@@ -2,7 +2,6 @@ import React from 'react';
 import Question from '../../../components/Question/question.jsx';
 import Title from '../../../components/Title/title.jsx';
 import { formQuest, formTitleLink } from '../../../texts/formTexts.js';
-import './style.css';
 import { useFormContext, isFormValid } from '../../../utils/formContext.jsx';
 
 const Form10Submit = () => {
