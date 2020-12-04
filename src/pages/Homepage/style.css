@@ -15,11 +15,6 @@
 .section_preview {
   text-align: center;
   padding-bottom: 4rem;
-  background: url('./wrapped-baby-svgrepo-com.svg');
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: 300px 100px;
-  background-position: -50% 70%;
   background-color: #aeaebe;
 }
 

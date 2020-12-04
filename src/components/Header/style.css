@@ -2,14 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
 
 .header_homepage {
+  position: relative;
   height: 100vh;
   padding: 20px 40px;
   /* background-image: linear-gradient(rgba(75, 75, 75, 0.137), rgba(75, 75, 75, 0.137)), url(../img/header-bg-ukol.jpg);
   background-position: 50% 50%;  */
-  background: url(../../assets/main/header-bg-ukol.jpg) 50% 50%; 
+  background: url(../../assets/main/header-bg-ukol.jpg) 50% 50%;
   background-size: cover;
   color: #fff;
   text-align: center;
+}
+.header_homepage .video_wrapper {
+  display: none;
 }
 
 .header_logo {
@@ -18,13 +22,14 @@
 }
 
 /* .header_nav { */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* justify-content: space-between; */
+/* display: flex; */
+/* flex-direction: column; */
+/* align-items: center; */
+/* justify-content: space-between; */
 /* } */
 
 .header_menu {
+  position: relative;
   min-width: 30%;
 }
 
@@ -54,6 +59,30 @@ header {
 }
 
 @media (min-width: 768px) {
+  .header_homepage .video_wrapper {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .header_homepage .video_wrapper video {
+    object-fit: cover;
+  }
+  .header_homepage .video_wrapper::before {
+    content: '';
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
   header {
     margin-top: 0;
   }
@@ -64,9 +93,10 @@ header {
     padding: 0;
     justify-content: space-between;
   }
- 
+
   /* .header_menu-buttons, */
   .header_nav {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,6 +111,7 @@ header {
   }
 
   .header_content {
+    position: relative;
     margin-top: 15%;
   }
 }

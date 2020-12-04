@@ -6,6 +6,11 @@ import { links } from '../../links.js';
 
 const Header = ({}) => (
   <header id="header" className="header_homepage">
+    <div className="video_wrapper">
+      <video loop autoPlay muted>
+        <source src="assets/main/header_bg_video.mp4" type="video/mp4" />
+      </video>
+    </div>
     <div className="header_nav">
       <div className="header_logo">{home.logo}</div>
       <div className="header_menu">
@@ -30,7 +35,7 @@ const Header = ({}) => (
     <div className="header_content">
       <h1 className="header_title">{home.title}</h1>
       <p className="header_title-text">{home.titleText}</p>
-      <StyledLink text={home.button3Text} url={links[1].url}/>
+      <StyledLink text={home.button3Text} url={links[1].url} />
     </div>
   </header>
 );
