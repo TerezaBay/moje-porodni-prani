@@ -9,7 +9,7 @@ const FormContext = createContext(
     formState: initialFormState,
     setFormState: () =>
       console.error('You are using FormContext without FormContextProvider!'),
-  })
+  }),
 );
 
 export function useFormContext() {
@@ -37,6 +37,7 @@ function createFormContextValue({ formState, setFormState }) {
       const newValue = [...formState];
 
       newValue[i] = value;
+      console.log(newValue)
 
       setFormState(newValue);
     },
@@ -54,7 +55,7 @@ export const isFormValid = (formState) => {
     }
 
     if (typeof quest === 'undefined') {
-      return true; // mandatory qustion is invalid
+      return true; // mandatory question is invalid
     }
 
     const questOptionCount = formQuest[i].answers.length;
@@ -81,13 +82,13 @@ export const isFormValid = (formState) => {
 };
 
 const isCheckboxQuestionValid = (quest, i) => {
-  const anwers = formQuest[i].answers;
+  const answers = formQuest[i].answers;
   const checkedValuesCount = quest.value.filter((item) => !!item).length;
 
   // When requiredCheckedAll is true, all answers should be checked (true)
   if (
     !!formQuest[i].requiredCheckedAll &&
-    checkedValuesCount !== anwers.length
+    checkedValuesCount !== answers.length
   ) {
     return false;
   }

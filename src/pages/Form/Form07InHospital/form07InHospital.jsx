@@ -4,7 +4,7 @@ import Title from '../../../components/Title/title.jsx';
 import { formQuest, formTitleLink } from '../../../texts/formTexts.js';
 import '../style.css';
 
-const Form07Puerperium = () => (
+const Form07InHospital = () => (
   <main className="form_main">
     <Title titleClass="title-div" titleText={formTitleLink[6].title} />
     <form className="form">
@@ -15,4 +15,4 @@ const Form07Puerperium = () => (
   </main>
 );
 
-export default Form07Puerperium;
+export default Form07InHospital;
