@@ -57,7 +57,7 @@ export const articleTexts = [
     Naplánujte si, kdy porodní přání projdete s porodní asistentkou či lékařem v porodnici, kde
     chcete porodit.</p>
     
-    <h3>Raději 3x</h3>
+    <h3>Raději 3×</h3>
     Udělejte si tři kopie dokončeného textu. Jednu uložte do tašky k porodu, abyste ji měla po
     ruce, druhou dejte partnerovi a třetí bude založena do lékařské zprávy a bude ji mít
     k dispozici ošetřující personál.
