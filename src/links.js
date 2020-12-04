@@ -8,7 +8,7 @@ import Form03BeforeBirth from './pages/Form/Form03BeforeBirth/form03BeforeBirth.
 import Form04PreLabour from './pages/Form/Form04PreLabour/form04PreLabour.jsx';
 import Form05DuringLabour from './pages/Form/Form05DuringLabour/form05DuringLabour.jsx';
 import Form06AfterBirth from './pages/Form/Form06AfterBirth/form06AfterBirth.jsx';
-import Form07Puerperium from './pages/Form/Form07Puerperium/form07Puerperium.jsx';
+import Form07InHospital from './pages/Form/Form07InHospital/form07InHospital.jsx';
 import Form08PersonalNotes from './pages/Form/Form08PersonalNotes/form08PersonalNotes.jsx';
 import Form09Preferences from './pages/Form/Form09Preferences/form09Preferences.jsx';
 import Form10Submit from './pages/Form/Form10Submit/form10Submit.jsx';
@@ -33,7 +33,7 @@ export const routesForm = [
   { path: '/formhome/form04PreLabour', component: Form04PreLabour },
   { path: '/formhome/form05DuringLabour', component: Form05DuringLabour },
   { path: '/formhome/form06AfterBirth', component: Form06AfterBirth },
-  { path: '/formhome/form07Puerperium', component: Form07Puerperium },
+  { path: '/formhome/form07InHospital', component: Form07InHospital },
   { path: '/formhome/form08PersonalNotes', component: Form08PersonalNotes },
   { path: '/formhome/form09Preferences', component: Form09Preferences },
   { path: '/formhome/form10Submit', component: Form10Submit },

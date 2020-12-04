@@ -1,3 +1,9 @@
+@media (min-width: 768px) {
+  
+}
+
+@media (min-width: 960px) {
+
 .form-nav {
   background-color: #aeaebe;
   height: 100%;
@@ -7,7 +13,8 @@
 
 .form-nav_links {
   margin: 0;
-  padding: 12rem 0 0 3rem;
+  padding-top: 12rem;
+  padding-left: 0;
 }
 
 .form-nav_links li {
@@ -21,8 +28,15 @@
   max-width: 800px;
   color: white;
   text-decoration: none;
+  padding-left: 3rem;
 }
 
 .form-nav_links a:focus, .form-nav_links a:hover {
   color: #89455D;
+}
+
+.form-nav .form-nav--selected {
+  color: #89455D;
+  /* background-color: #8d5e6e; */
+}
 }

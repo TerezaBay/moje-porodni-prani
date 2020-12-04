@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './style.css';
 
 import { formTitleLink } from '../../texts/formTexts.js';
@@ -9,7 +9,7 @@ const FormNav = () => (
     <ul className="form-nav_links">
       {formTitleLink.map((titleLink, i) => (
         <li key={i}>
-          <Link to={titleLink.link}>{titleLink.title}</Link>
+          <NavLink exact to={titleLink.link} activeClassName="form-nav--selected">{titleLink.title}</NavLink>
         </li>
       ))}
     </ul>
