@@ -9,6 +9,7 @@
   display: block;
   text-decoration: none;
   color: #fff;
+  transition: background-color 0.2s ease;
 }
 
 .styled_link .default {
@@ -18,8 +19,9 @@
 }
 
 .styled_link .transparent {
-  border: 1px solid #fff;
-  border-radius: 1px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  transition: filter 0.2s ease;
 }
 
 .styled_link .yellow {
@@ -28,6 +30,7 @@
   padding: 12px 3rem;
   margin: 2rem 0 2rem;
   display: inline-block;
+  box-shadow: 7px 5px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 .styled_link .grey {
@@ -36,4 +39,25 @@
   padding: 12px 3rem;
   margin: 2rem 0 2rem;
   display: inline-block;
+  box-shadow: 7px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.styled_link .yellow:hover,
+.styled_link .yellow:focus {
+  background-color: #f4c737;
+}
+
+.styled_link .transparent:hover,
+.styled_link .transparent:focus {
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+}
+
+.styled_link .default:hover,
+.styled_link .default:focus {
+  background-color: #8d5e6e;
+}
+
+.styled_link .grey:hover,
+.styled_link .grey:focus {
+  background-color: #93939f;
 }

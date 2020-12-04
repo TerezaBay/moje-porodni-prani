@@ -13,9 +13,9 @@
 }
 
 .section_preview {
-  background-color: #aeaebe;
   text-align: center;
   padding-bottom: 4rem;
+  background-color: #aeaebe;
 }
 
 .preview_title {
@@ -87,13 +87,12 @@
   .preview_title {
     padding: 8rem 0 0;
   }
-  
+
   .preview_container {
     padding: 0 1rem;
   }
-  
+
   .section_authors {
     margin-top: 6rem;
   }
-
 }

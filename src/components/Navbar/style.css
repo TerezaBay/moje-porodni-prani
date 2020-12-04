@@ -49,6 +49,7 @@
   text-decoration: none;
   color: #fff;
   border-top: 2px solid #8d5e6e;
+  transition: background-color 0.2s ease;
 }
 
 .navbar_link:hover,

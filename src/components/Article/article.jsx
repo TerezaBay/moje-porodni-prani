@@ -23,10 +23,14 @@ const Article = ({ artTitle, artImg, artPerex, artBody, prevUrl, nextUrl }) => (
           ></div>
           <div className="article_buttons">
             {prevUrl && (
-              <StyledLink text="Předchozí článek" url={prevUrl} type="yellow" />
+              <StyledLink text="Předchozí článek" url={prevUrl} type="grey" />
             )}
             {nextUrl && (
-              <StyledLink text="Následující článek" url={nextUrl} type="grey" />
+              <StyledLink
+                text="Následující článek"
+                url={nextUrl}
+                type="yellow"
+              />
             )}
           </div>
         </div>

@@ -1,16 +1,10 @@
 import React from 'react';
 import './style.css';
 
-const Footer = ({ links, copyrightText }) => (
+const Footer = ({ copyrightText, creditsText }) => (
   <footer className="footer_homepage">
-    <ul className="footer_links">
-      {links.map((link, i) => (
-        <li key={i}>
-          <a href={link.url}>{link.name}</a>
-        </li>
-      ))}
-    </ul>
     <div className="footer_copyright">{copyrightText}</div>
+    <div className="footer_credits">{creditsText}</div>
   </footer>
 );
 

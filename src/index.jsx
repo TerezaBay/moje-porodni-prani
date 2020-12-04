@@ -39,7 +39,10 @@ const App = () => {
           ))}
         </Switch>
 
-        <Footer copyrightText={home.footerCopyright} links={home.footerLinks} />
+        <Footer
+          copyrightText={home.footerCopyright}
+          creditsText={home.footerCredits}
+        />
       </Router>
     </FormContextProvider>
   );
