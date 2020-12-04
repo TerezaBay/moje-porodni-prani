@@ -9,6 +9,7 @@
   display: block;
   text-decoration: none;
   color: #fff;
+  transition: background-color 0.2s ease;
 }
 
 .styled_link .default {
@@ -20,6 +21,7 @@
 .styled_link .transparent {
   border: 2px solid #fff;
   border-radius: 3px;
+  transition: filter 0.2s ease;
 }
 
 .styled_link .yellow {

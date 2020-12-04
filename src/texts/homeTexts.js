@@ -10,7 +10,8 @@ export const home = {
 
   // titles header
   title: 'Pro lepší zážitek z porodu',
-  titleText: 'Sestav si své porodní přání na míru. Jednoduše, přehledně, s respektem.',
+  titleText:
+    'Sestav si své porodní přání na míru. Jednoduše, přehledně, s respektem.',
 
   // mainListText: [
   //   'sestavit si porodní plán podle svých potřeb a představ,',
@@ -23,28 +24,22 @@ export const home = {
   emphaText:
     'Zdarma získáš přehledný porodní plán, který si budeš moci vzít do porodnice. Nemusíš se nikam registrovat. K tvým datům budeš mít přístup jen ty a lidé, se kterými svůj plán nasdílíš.',
 
-  previewTitle: "Co dalšího je dobré vědět?",
+  previewTitle: 'Co dalšího je dobré vědět?',
 
   authors: [
     {
-      authorsImg: "assets/authors/vera.jpg",
+      authorsImg: 'assets/authors/vera.jpg',
       authorsName: 'Věra Staňková',
       authorsText:
         'Věrka pracuje pro skvělou neziskovku Aperio. Je hlavním nositelem nápadu a určitě se vyřádí na stylování! Má velikou radost, že projekt začíná dostávat pevné obrysy, a doufá, že aplikace brzy pomůže prvním nastávajícím rodičům s přípravou na porod.',
     },
     {
-      authorsImg: "assets/authors/Terka.jpg",
+      authorsImg: 'assets/authors/Terka.jpg',
       authorsName: 'Tereza Bařinková',
       authorsText:
         'Terka absolvovala výcvik prenatální psychologie, díky čemuž si uvědomila, nakolik je příchod na tento svět důležitý. A jelikož se z ní stává naprostý nadšenec pro webový vývoj a React, udělá co je v jejích silách, aby si aplikace co nejdříve našla cestu ke svým uživatelům. ',
     },
   ],
-
-  footerLinks: [
-    { name: 'Domů', url: '#header' },
-    { name: 'Sestavit přání', url: '#header' },
-    { name: 'Užitečné odkazy', url: '#main' },
-    // { name: 'O autorkách', url: '#authors' },
-  ],
-  footerCopyright: 'Homepage verze 1. 0',
+  footerCopyright: '© 2020 Moje porodní přání. Všechna práva vyhrazena.',
+  footerCredits: 'Vytvořeno díky Czechitas a. s., icons by Freepik',
 };

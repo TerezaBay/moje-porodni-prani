@@ -13,9 +13,14 @@
 }
 
 .section_preview {
-  background-color: #aeaebe;
   text-align: center;
   padding-bottom: 4rem;
+  background: url('./wrapped-baby-svgrepo-com.svg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 300px 100px;
+  background-position: -50% 70%;
+  background-color: #aeaebe;
 }
 
 .preview_title {
@@ -87,13 +92,12 @@
   .preview_title {
     padding: 8rem 0 0;
   }
-  
+
   .preview_container {
     padding: 0 1rem;
   }
-  
+
   .section_authors {
     margin-top: 6rem;
   }
-
 }
