@@ -50,11 +50,13 @@ const Homepage = () => (
           ))}
         </div>
         <SectionQuote text={sectionTexts.section2} />
-        <StyledLink
-          text={links[2].name}
-          url={links[2].url}
-          type="transparent"
-        />
+        <div className="preview_more">
+          <StyledLink
+            text={links[2].name}
+            url={links[2].url}
+            type="transparent"
+          />
+        </div>
       </section>
 
       <section id="authors" className="section_authors">

@@ -48,11 +48,19 @@
   }
 
   .section_preview {
-    padding-bottom: 6rem;
+    padding-bottom: 4rem;
   }
 
   .preview_title {
     padding: 6rem 0 5rem;
+  }
+
+  .section_preview .section_quote {
+    display: none;
+  }
+
+  .preview_more {
+    padding-top: 4rem;
   }
 
   .section_authors {
@@ -89,6 +97,7 @@
   }
 
   .preview_container {
+    display: inline-block;
     padding: 0 1rem;
   }
 
