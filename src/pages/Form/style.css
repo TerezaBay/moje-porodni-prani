@@ -24,8 +24,9 @@
   cursor: initial;
 }
 
-.form_main textarea, .form_main input {
-  font-family: "Open Sans", sans-serif;
+.form_main textarea,
+.form_main input {
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
 
@@ -41,12 +42,19 @@
   margin: 0 0 2rem 0;
 }
 
-.form_submit_button {
-  margin: 3rem auto;
+.form_submit_container {
   text-align: center;
+}
+
+.form_submit_link {
+  text-decoration: none;
+}
+
+.form_submit_button {
+  margin: 3rem 0;
   padding: 1rem 30px;
   border-radius: 3px;
-  display: block;
+  display: inline-block;
   text-decoration: none;
   color: #fff;
   transition: background-color 0.2s ease;
@@ -57,6 +65,7 @@
   filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
   border-style: none;
   outline: none;
+  cursor: pointer;
 }
 
 .form_submit_button--disabled {
@@ -96,7 +105,7 @@
     justify-content: flex-end;
     margin-bottom: 2rem;
   }
-  
+
   .form_buttons .styled_link a {
     margin: 1rem 4rem 2rem 0;
   }
@@ -132,7 +141,7 @@
     padding-right: 10%;
     margin: 0 0 4rem 0;
   }
-  
+
   .form_buttons .styled_link a {
     margin: 1rem 0 4rem 4rem;
   }

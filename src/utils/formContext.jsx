@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useMemo } from 'react';
 
 import { formQuest } from '../texts/formTexts.js';
 
-const initialFormState = [];
+const initialFormState = Array(formQuest.length).fill(undefined);
 
 const FormContext = createContext(
   createFormContextValue({

@@ -23,24 +23,27 @@ const Form10Submit = () => {
         {formQuest.slice(22, 23).map((question, i) => (
           <Question key={i} quest={question} />
         ))}
-        <Link
-          to={
-            isFormValid(formState)
-              ? routesForm[10].path
-              : '/formhome/form10Submit'
-          }
-        >
-          <button
-            className={
+        <div className="form_submit_container">
+          <Link
+            className="form_submit_link"
+            to={
               isFormValid(formState)
-                ? 'form_submit_button form_submit_button--active'
-                : 'form_submit_button form_submit_button--disabled'
+                ? routesForm[10].path
+                : '/formhome/form10Submit'
             }
-            onClick={handleClick}
           >
-            Sestavit porodní přání
-          </button>
-        </Link>
+            <button
+              className={
+                isFormValid(formState)
+                  ? 'form_submit_button form_submit_button--active'
+                  : 'form_submit_button form_submit_button--disabled'
+              }
+              onClick={handleClick}
+            >
+              Sestavit porodní přání
+            </button>
+          </Link>
+        </div>
       </form>
     </main>
   );
