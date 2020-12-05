@@ -6,8 +6,6 @@ import FormNav from '../../../components/FormNav/formNav.jsx';
 import { routesForm } from '../../../links.js';
 import StyledLink from '../../../components/StyledLink/styledLink';
 
-// Uvnitř té funkce budeš hledat tu routu, která má shodnou path jako je location.
-
 const FormHome = () => {
   const { pathname } = useLocation();
   const location = useLocation();
