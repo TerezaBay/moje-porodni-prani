@@ -48,6 +48,7 @@
 .form-nav {
   height: 100%;
   width: 19rem;
+  overflow-y: auto;
 }
 
 .form-nav_links {

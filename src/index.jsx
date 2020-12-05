@@ -1,6 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useLocation,
+} from 'react-router-dom';
 import { home } from './texts/homeTexts.js';
 import { articleTexts } from './texts/articleTexts.js';
 import { routes } from './links.js';
@@ -14,6 +20,7 @@ import ScrollToTop from './components/ScrollToTop/scrollToTop.jsx';
 import { FormContextProvider } from './utils/formContext.jsx';
 
 const App = () => {
+
   return (
     <FormContextProvider>
       <Router>

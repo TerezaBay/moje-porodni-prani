@@ -9,7 +9,7 @@ import { links } from '../../links.js';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  let location = useLocation();
+  const location = useLocation();
 
   const handleScroll = () => {
     window.scrollY > 600 ? setScrolled(true) : setScrolled(false);
@@ -21,9 +21,12 @@ const Navbar = () => {
       return () => window.removeEventListener('scroll', handleScroll);
     }
   }, [location]);
-
-  const scrollToTop = () => window.scrollTo(0, 0);
-
+  
+  // onClick scroll to top on homepage (pathname is not changed)
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+  
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -31,7 +34,7 @@ const Navbar = () => {
   };
 
   const handleClickScroll = () => {
-    setMenuIsOpen(!menuIsOpen);
+    setMenuIsOpen(false);
     scrollToTop();
   };
 

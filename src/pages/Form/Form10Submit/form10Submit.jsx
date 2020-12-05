@@ -6,14 +6,14 @@ import { formQuest, formTitleLink } from '../../../texts/formTexts.js';
 import { useFormContext, isFormValid } from '../../../utils/formContext.jsx';
 
 const Form10Submit = () => {
-  const { formState } = useFormContext();
-  const formJSON = JSON.stringify(formState);
+  // const { formState } = useFormContext();
+  // const formJSON = JSON.stringify(formState);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formJSON);
-    console.log('isFormValid', isFormValid(formState)); // TODO remove when this function is finished
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log(formJSON);
+  //   console.log('isFormValid', isFormValid(formState)); // TODO remove when this function is finished
+  // };
 
   // const handleChange = () => {
   //   console.log(formJSON);
@@ -28,7 +28,7 @@ const Form10Submit = () => {
         ))}
       </form>
 
-      <form
+      {/* <form
         className="form"
         method="POST"
         action="https://api.porodni-prani.cz/pdf"
@@ -47,7 +47,7 @@ const Form10Submit = () => {
         />
         <br/>
         <button type="submit">Sestavit porodní přání</button>
-      </form>
+      </form> */}
     </main>
   );
 };
