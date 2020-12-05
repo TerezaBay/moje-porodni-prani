@@ -10,12 +10,14 @@ import { useFormContext, isFormValid } from '../../../utils/formContext.jsx';
 import '../style.css';
 
 const Form11End = () => {
-  const { formState } = useFormContext();
+  const { formState, setFormState } = useFormContext();
   const formJSON = JSON.stringify(formState);
   const formRef = useRef(null);
 
   useEffect(() => {
     formRef.current.submit();
+    setFormState([])
+    // toto nefunguje
   }, []);
 
   return (
@@ -45,6 +47,7 @@ const Form11End = () => {
           onChange={() => readOnly}
           rows="10"
           cols="60"
+          style={{display: "none"}}
         />
       </form>
     </main>

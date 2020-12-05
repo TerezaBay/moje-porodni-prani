@@ -25,8 +25,8 @@ export const formTexts = [
   {
     title: 'Tvé porodní přání je hotové!',
     text: [
-      'Skvělé! Na následující adrese:_____ si můžeš prohlédnout seznam svých porodních přání.',
-      'Jak se seznamem dále naložit? Jedinečný odkaz si můžeš uložit do záložek v prohlížeči, nebo si seznam rovnou vytisknout. Odkaz můžeš s kýmkoliv sdílet.',
+      'Skvělé! Tvůj seznam přání se právě stáhl do tvého zařízení.',
+      // 'Jak se seznamem dále naložit? Jedinečný odkaz si můžeš uložit do záložek v prohlížeči, nebo si seznam rovnou vytisknout. Odkaz můžeš s kýmkoliv sdílet.',
       'Doporučujeme seznam přání předem probrat s personálem v porodnici, kde jsi se rozhodla rodit a ověřit si, zda je v souladu s jejich praxí. Pokud plánuješ mít svou porodní asistentku nebo dulu, seznam se svým přáním i je.',
       'Udělej si tři kopie dokončeného textu. Jednu ulož do tašky k porodu, abys ji měla po ruce, druhou dej partnerovi a třetí bude založena do lékařské zprávy a bude ji mít k dispozici ošetřující personál.',
     ],

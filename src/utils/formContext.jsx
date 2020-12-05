@@ -37,7 +37,7 @@ function createFormContextValue({ formState, setFormState }) {
       const newValue = [...formState];
 
       newValue[i] = value;
-      console.log(newValue)
+      // console.log(newValue)
 
       setFormState(newValue);
     },

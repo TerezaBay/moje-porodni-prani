@@ -29,6 +29,45 @@
   font-size: 16px;
 }
 
+.form_buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form_buttons .styled_link a {
+  margin: 0 0 2rem 0;
+}
+
+.form_submit_button {
+  margin: 3rem auto;
+  text-align: center;
+  padding: 1rem 30px;
+  border-radius: 3px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.2s ease;
+  background: #89455d;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 400;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+  border-style: none;
+  outline: none;
+}
+
+.form_submit_button--disabled {
+  background-color: #93939f;
+}
+
+.form_submit_button--active:hover,
+.form_submit_button--active:focus {
+  background-color: #8d5e6e;
+}
+
 @media (min-width: 768px) {
   .form_main {
     padding-top: 11rem;
@@ -51,12 +90,22 @@
   .disclaimer {
     padding-left: 3rem;
   }
+
+  .form_buttons {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+  }
+  
+  .form_buttons .styled_link a {
+    margin: 1rem 4rem 2rem 0;
+  }
 }
 
 @media (min-width: 960px) {
   .form_main {
     padding-top: 5rem;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
   }
 
   .formtext_container,
@@ -77,5 +126,14 @@
 
   .formtext p {
     margin: 0 0 1em;
+  }
+
+  .form_buttons {
+    padding-right: 10%;
+    margin: 0 0 4rem 0;
+  }
+  
+  .form_buttons .styled_link a {
+    margin: 1rem 0 4rem 4rem;
   }
 }

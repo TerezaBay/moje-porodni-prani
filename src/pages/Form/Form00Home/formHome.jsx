@@ -7,33 +7,29 @@ import { routesForm } from '../../../links.js';
 import StyledLink from '../../../components/StyledLink/styledLink';
 
 const FormHome = () => {
-  const { pathname } = useLocation();
   const location = useLocation();
-  const [currentLocationIndex, setCurrentLocationIndex] = useState(location);
+  const [currentLocationIndex, setCurrentLocationIndex] = useState(0);
 
   useEffect(() => {
     const currentLocIndex = routesForm.findIndex(
       (route) => route.path === location.pathname,
     );
     setCurrentLocationIndex(currentLocIndex);
-
-    console.log("currentLocIndex = " + currentLocIndex);
-    console.log("location.pathname = " + location.pathname);
   }, [location]);
 
   const nextUrl = () => {
-    if (currentLocationIndex + 1 < routesForm.length) {
+    if (currentLocationIndex + 1 < routesForm.length - 1) {
       return routesForm[currentLocationIndex + 1].path;
-    } return false
+    }
+    return false;
   };
-  console.log("nextUrl = " + nextUrl())
 
   const prevUrl = () => {
     if (currentLocationIndex > 0) {
       return routesForm[currentLocationIndex - 1].path;
-    } return false
+    }
+    return false;
   };
-  console.log("prevUrl = " + prevUrl())
 
   return (
     <>
@@ -45,11 +41,12 @@ const FormHome = () => {
         ))}
       </Switch>
 
-      {location.pathname !== '/formhome/form10Submit' &&
-      location.pathname !== '/formhome/form11End' ? (
+      {location.pathname !== '/formhome/form11End' ? (
         <div className="form_buttons">
-          {prevUrl && <StyledLink text="Zpět" url={prevUrl()} type="grey" />}
-          {nextUrl && <StyledLink text="Další" url={prevUrl()} type="burgundy" />}
+          {prevUrl() && <StyledLink text="Zpět" url={prevUrl()} type="grey" />}
+          {nextUrl() && (
+            <StyledLink text="Další" url={nextUrl()} type="burgundy" />
+          )}
         </div>
       ) : null}
     </>
