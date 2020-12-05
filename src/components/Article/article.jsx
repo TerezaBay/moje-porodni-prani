@@ -3,7 +3,7 @@ import './style.css';
 
 import SectionQuote from '../SectionQuote/section.jsx';
 import Title from '../Title/title.jsx';
-import StyledLink from '../StyledLink/index.jsx';
+import StyledLink from '../StyledLink/styledLink.jsx';
 
 const Article = ({ artTitle, artImg, artPerex, artBody, prevUrl, nextUrl }) => (
   <>

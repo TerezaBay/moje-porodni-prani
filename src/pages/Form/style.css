@@ -24,10 +24,14 @@
   cursor: initial;
 }
 
+.form_main textarea, .form_main input {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
 @media (min-width: 768px) {
   .form_main {
     padding-top: 11rem;
-    /* toto by ještě chtělo vylepšit */
   }
 
   .form_main .title-div {
@@ -41,8 +45,11 @@
 
   .formtext_container,
   .form {
-    margin: 0 auto;
-    /* proč toto zarovnání nefunguje */
+    padding: 0 3rem 0 15%;
+  }
+
+  .disclaimer {
+    padding-left: 3rem;
   }
 }
 
@@ -55,8 +62,8 @@
   .formtext_container,
   .form {
     margin-left: 19rem;
-    max-width: 1000px;
-    /* toto se musí dát do středu, ale hernajs jak to udělat*/
+    padding: 0 5rem 0 15%;
+    max-width: 1200px;
   }
 
   .form_main .title-div {

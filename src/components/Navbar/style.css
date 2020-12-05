@@ -52,7 +52,7 @@
   transition: background-color 0.2s ease;
 }
 
-.navbar_link:hover{
+.navbar_link:hover, .navbar_link:focus {
   background-color: #8d5e6e;
 }
 

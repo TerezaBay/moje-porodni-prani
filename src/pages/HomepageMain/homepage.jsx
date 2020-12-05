@@ -1,13 +1,11 @@
 import React from 'react';
 import './style.css';
-import { links } from '../../links.js';
 import { home } from '../../texts/homeTexts.js';
 import { serviceTexts } from '../../texts/serviceTexts.js';
 import { articleTexts } from '../../texts/articleTexts.js';
 import { sectionTexts } from '../../texts/sectionTexts.js';
 import { titleTexts } from '../../texts/titleTexts.js';
 
-import Header from '../../components/Header/header.jsx';
 import SectionQuote from '../../components/SectionQuote/section.jsx';
 import Title from '../../components/Title/title.jsx';
 import ArtPreview from '../../components/ArtPreview/preview.jsx';
@@ -15,9 +13,14 @@ import Service from '../../components/Service/service.jsx';
 import Author from '../../components/Author/author.jsx';
 import StyledLink from '../../components/StyledLink/styledLink.jsx';
 
-const Homepage = () => (
+const HomepageMain = ({
+  // emphaText,
+  // previewTitle,
+  // authors,
+  // button2Text,
+  // button2Url,
+}) => (
   <>
-    <Header />
     <SectionQuote text={sectionTexts.section1} />
 
     <main id="main" className="homepage_main">
@@ -39,24 +42,21 @@ const Homepage = () => (
       <section className="section_preview">
         <h2 className="preview_title">{home.previewTitle}</h2>
         <div className="preview_container">
-          {articleTexts.slice(0, 2).map((article) => (
+          {articleTexts.map((article) => (
             <ArtPreview
               key={article.artTitle}
               title={article.artTitle}
               img={article.artImg}
               text={article.artPerex}
-              url={article.artUrl}
             />
           ))}
         </div>
         <SectionQuote text={sectionTexts.section2} />
-        <div className="preview_more">
-          <StyledLink
-            text={links[2].name}
-            url={links[2].url}
-            type="transparent"
-          />
-        </div>
+        <StyledLink
+          text={home.button2Text}
+          url={home.button2Url}
+          type="transparent"
+        />
       </section>
 
       <section id="authors" className="section_authors">
@@ -79,4 +79,4 @@ const Homepage = () => (
   </>
 );
 
-export default Homepage;
+export default HomepageMain;

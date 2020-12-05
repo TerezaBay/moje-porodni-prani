@@ -2,6 +2,7 @@
         xmlns:xs="http://www.w3.org/2001/XMLSchema"
         xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
         xmlns:fn="http://www.w3.org/2005/xpath-functions"
+        xmlns:x="http://www.jirsak.org/2020/XSLT-service"
         xmlns="http://www.w3.org/1999/xhtml"
         version="3.0">
 
@@ -83,27 +84,19 @@
 
     <xsl:template match="/json/json[3]">
         <xsl:if test="exists(value)">
-            <xsl:variable name="texty" select="(
-            if (value[1] = 'true') then 'těhotenská cukrovka' else (),
-             if (value[2] = 'true') then 'streptokok typu B' else (),
-             if (value[3] = 'true') then 'jiný RH faktor než dítě' else (),
-             if (value[4] = 'true') then 'HIV' else (),
-             if (value[5] = 'true') then 'genitální herpes' else (),
-             if (value[6] = 'true') then 'preeklampsie' else (),
-             if (value[7] = 'true') then 'podstoupená operace dělohy' else ()
-             )"/>
-            <p>
+            <p class="small">
                 <strong>
                     <xsl:text>Poznámky ke zdravotnímu stavu: </xsl:text>
                 </strong>
-                <xsl:value-of select="fn:string-join($texty, ', ')"/>
+                <xsl:value-of
+                        select="x:filter-join(value, ('těhotenská cukrovka', 'streptokok typu B', 'jiný RH faktor než dítě', 'HIV', 'genitální herpes', 'preeklampsie', 'podstoupená operace dělohy'))"/>
             </p>
         </xsl:if>
     </xsl:template>
 
     <xsl:template match="/json/json[4]">
         <xsl:if test="exists(value)">
-            <p>
+            <p class="small">
                 <strong>
                     <xsl:text>Specifické potřeby: </xsl:text>
                 </strong>
@@ -175,31 +168,16 @@
     <xsl:template match="/json/json[8]">
         <xsl:if test="exists(value)">
             <p>
-            <strong>Tlumení bolesti</strong>
+                <strong>Tlumení bolesti</strong>
             </p>
             <p>
-                <strong>Upřednostňuji tyto nefarmakologické metody:</strong>
+                <strong>
+                    <xsl:text>Upřednostňuji tyto nefarmakologické metody: </xsl:text>
+                </strong>
+                <xsl:value-of
+                        select="x:filter-join(value, ('vanu nebo sprchu', 'masáž', 'střídání pozic', 'dýchací techniky', 'aromaterapii', 'teplé obklady'))"/>
+
             </p>
-            <ul>
-                <xsl:if test="value[1] = 'true'">
-                    <li>vanu nebo sprchu</li>
-                </xsl:if>
-                <xsl:if test="value[2] = 'true'">
-                    <li>masáž</li>
-                </xsl:if>
-                <xsl:if test="value[3] = 'true'">
-                    <li>střídání pozic</li>
-                </xsl:if>
-                <xsl:if test="value[4] = 'true'">
-                    <li>dýchací techniky</li>
-                </xsl:if>
-                <xsl:if test="value[5] = 'true'">
-                    <li>aromaterapii</li>
-                </xsl:if>
-                <xsl:if test="value[6] = 'true'">
-                    <li>teplé obklady</li>
-                </xsl:if>
-            </ul>
         </xsl:if>
     </xsl:template>
 
@@ -335,18 +313,12 @@
 
     <xsl:template match="/json/json[14]">
         <xsl:if test="exists(value)">
-            <xsl:variable name="texty" select="
-            if (value[1] = 'true') then 'injekci vitaminu K' else (),
-            if (value[2] = 'true') then 'vykapání očí O-Septonexem' else (),
-            if (value[3] = 'true') then 'koupání po porodu' else (),
-            if (value[4] = 'true') then 'měření a vážení' else (),
-            if (value[5] = 'true') then 'podání umělé výživy' else ()
-"/>
             <p>
                 <strong>
                     <xsl:text>Prosím, aby dítě NEPODSTOUPILO: </xsl:text>
                 </strong>
-                <xsl:value-of select="fn:string-join($texty,  ', ')"/>
+                <xsl:value-of
+                        select="x:filter-join(value, ('injekci vitaminu K', 'vykapání očí O-Septonexem', 'koupání po porodu', 'měření a vážení', 'podání umělé výživy'))"/>
             </p>
         </xsl:if>
     </xsl:template>
@@ -378,10 +350,10 @@
     <xsl:template match="/json/json[16]">
         <xsl:if test="exists(value)">
             <xsl:if test="value[1] = 'true'">
-                <li>přeji si začít s kojením ihned po porodu</li>
+                <li>Přeji si začít s kojením ihned po porodu.</li>
             </xsl:if>
             <xsl:if test="value[2] = 'true'">
-                <li>přeji si začít s kojením po konzultaci s laktační poradkyní</li>
+                <li>Přeji si začít s kojením po konzultaci s laktační poradkyní.</li>
             </xsl:if>
         </xsl:if>
     </xsl:template>
@@ -404,33 +376,25 @@
 
     <xsl:template match="/json/json[18]">
         <xsl:if test="exists(value)">
-            <xsl:if test="value[1] = 'true'">
-                <li>
-                    <p>neprovádět rutinní dokrmování dítěte</p>
-                </li>
-            </xsl:if>
-            <xsl:if test="value[2] = 'true'">
-                <li>
-                    <p>nedávat dítěti dudlík</p>
-                </li>
-            </xsl:if>
-            <xsl:if test="value[3] = 'true'">
-                <li>
-                    <p>pahýl po pupeční šňůře nechat samovolně odpadnout</p>
-                </li>
-            </xsl:if>
+            <xsl:variable name="text" select="x:filter-join(value, ('neprovádět rutinní dokrmování dítěte', 'nedávat dítěti dudlík', 'pahýl po pupeční šňůře nechat samovolně odpadnout'))" />
+            <li>
+                <xsl:value-of
+                        select="fn:upper-case(fn:substring($text, 1 ,1)) || fn:substring($text, 2) || '.'"/>
+            </li>
         </xsl:if>
     </xsl:template>
 
     <xsl:template match="/json/json[19]">
         <xsl:if test="exists(value)">
             <li>
+                <xsl:text>Přeji si </xsl:text>
                 <xsl:choose>
                     <xsl:when test="value = '0'">opustit porodnici po nejdelší možné době</xsl:when>
                     <xsl:when test="value = '1'">opustit porodnici po nejkratší možné době</xsl:when>
                     <xsl:when test="value = '2'">opustit porodnice po době, kterou mi doporučí personál</xsl:when>
                     <xsl:when test="value = '3'">opustit porodnici ihned po porodu (ambulantní porod)</xsl:when>
                 </xsl:choose>
+                <xsl:text>.</xsl:text>
             </li>
         </xsl:if>
     </xsl:template>
@@ -485,4 +449,16 @@
             </xsl:if>
         </xsl:if>
     </xsl:template>
+
+    <xsl:function name="x:filter-join" as="xs:string">
+        <xsl:param name="value" as="xs:string+"/>
+        <xsl:param name="text" as="xs:string+"/>
+        <xsl:sequence select="fn:string-join(fn:for-each-pair($value, $text, x:filter-value#2),  ', ')"/>
+    </xsl:function>
+
+    <xsl:function name="x:filter-value" as="xs:string?">
+        <xsl:param name="value" as="xs:string"/>
+        <xsl:param name="text" as="xs:string"/>
+        <xsl:sequence select="if ($value = 'true') then $text else ()"/>
+    </xsl:function>
 </xsl:stylesheet>

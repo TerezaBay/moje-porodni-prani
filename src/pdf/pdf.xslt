@@ -100,8 +100,14 @@
 
     <xsl:template match="html:p">
         <fo:block text-align="justify" margin-bottom="1mm">
+            <xsl:if test="fn:contains-token(@class, 'small')">
+                <xsl:attribute name="font-size">9pt</xsl:attribute>
+            </xsl:if>
             <xsl:if test="fn:contains-token(@class, 'italic')">
                 <xsl:attribute name="font-style">italic</xsl:attribute>
+            </xsl:if>
+            <xsl:if test="fn:local-name(*[1]) = 'strong'">
+                <xsl:attribute name="margin-top">2mm</xsl:attribute>
             </xsl:if>
             <xsl:apply-templates/>
         </fo:block>

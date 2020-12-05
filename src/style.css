@@ -63,6 +63,10 @@ html {
   flex-direction: column;
 }
 
+main {
+  flex-grow: 1;
+}
+
 .footer_homepage {
   align-self: flex-end;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import StyledLink from '../StyledLink/index.jsx';
+import StyledLink from '../StyledLink/styledLink.jsx';
 
 const ArtPreview = ({ img, title, text, url }) => (
   <div className="preview">
