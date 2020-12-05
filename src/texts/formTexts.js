@@ -1,6 +1,6 @@
 export const formTitleLink = [
   { title: 'Úvod', link: '/formhome/' },
-  { title: 'Osobní informace', link: '/formhome/form02BasicInfo' },
+  { title: 'Základní informace', link: '/formhome/form02BasicInfo' },
   { title: 'Před porodem', link: '/formhome/form03BeforeBirth' },
   { title: 'První doba porodní', link: '/formhome/form04PreLabour' },
   { title: 'V průběhu porodu', link: '/formhome/form05DuringLabour' },
@@ -8,7 +8,7 @@ export const formTitleLink = [
   { title: 'Pobyt v porodnici', link: '/formhome/form07InHospital' },
   { title: 'Osobní poznámky', link: '/formhome/form08PersonalNotes' },
   { title: 'Preference', link: '/formhome/form09Preferences' },
-  { title: 'Ukončení a odeslání', link: '/formhome/form10Submit' },
+  { title: 'Odeslání a ukončení', link: '/formhome/form10Submit' },
   { title: 'Konec', link: '/formhome/form11End' },
 ];
 
@@ -189,7 +189,7 @@ export const formQuest = [
   {
     id: 12,
     quest: 'Co bys sis přála udělat s placentou?',
-    type: 'input',
+    type: 'textArea',
     answers: ['Doplň své přání. Pokud žádné nemáš, nech pole prázdné.'],
     textDisabled: '',
     isOptional: true,
@@ -277,9 +277,9 @@ export const formQuest = [
     id: 20,
     quest: 'Osobní úvod',
     type: 'longTextArea',
+    example: "Chtěla bych vám předem ze srdce poděkovat, protože věřím, že se vždy snažíte dělat pro mne a mé dítě to nejlepší. Čekám své první dítě. Chápu, že ne vždy se věci daří tak, jak si je člověk naplánuje - a u porodu to platí dvojnásob. Děkuji, že mi trpělivě vysvětlíte jednotlivé zákroky i potenciální problémy a že budete co nejvíce respektovat předložené preference.",
     answers: [
-      `<p>Zde je prostor pro tvůj osobní úvod porodního přání. Napiš zdravotnickému personálu to nejdůležitější, co ti leží na srdci. Můžeš využít naši předlohu, kterou zkopíruješ do textového pole a podle svých představ upravíš. Anebo si text můžeš zformulovat úplně sama. Pamatuj ale na to, že čím bude úvod stručnější, tím lépe a rychleji mu ostatní porozumí.</p>
-      <p>Chtěla bych vám předem ze srdce poděkovat, protože věřím, že se vždy snažíte dělat pro mne a mé dítě to nejlepší. Čekám své první dítě. Chápu, že ne vždy se věci daří tak, jak si je člověk naplánuje - a u porodu to platí dvojnásob. Děkuji, že mi trpělivě vysvětlíte jednotlivé zákroky i potenciální problémy a že budete co nejvíce respektovat předložené preference.</p>`,
+      "Zde je prostor pro tvůj osobní úvod porodního přání. Napiš zdravotnickému personálu to nejdůležitější, co ti leží na srdci. Můžeš využít naši předlohu, kterou zkopíruješ do textového pole a podle svých představ upravíš. Anebo si text můžeš zformulovat úplně sama. Pamatuj ale na to, že čím bude úvod stručnější, tím lépe a rychleji mu ostatní porozumí.",
     ],
   },
   {

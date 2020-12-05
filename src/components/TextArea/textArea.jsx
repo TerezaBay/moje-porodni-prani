@@ -1,16 +1,15 @@
 import React from 'react';
 import './style.css';
 
-const TextArea = ({ text, value, func, maxLength }) => (
-  <div className="text_area-div">
-    <label className="textArea_label">
+const TextArea = ({ text, extraText, classN, value, func, maxLength }) => (
+  <div className="text_area">
+    <label className="text_area_label">
       {text}
+      {extraText ? <p className="extra_text">{extraText}</p> : null}
       <textarea
-        className="text_area"
+        className={classN}
         value={value}
         onChange={(e) => func(e.target.value)}
-        cols="50"
-        rows="4"
         maxLength={maxLength}
       ></textarea>
     </label>

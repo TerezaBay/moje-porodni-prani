@@ -25,6 +25,10 @@
   padding: 0 0 1rem;
 }
 
+.preview_title {
+  padding: 4rem 0;
+}
+
 @media (min-width: 768px) {
   .preview_text {
     max-width: 800px;
@@ -34,7 +38,7 @@
 
 @media (min-width: 960px) {
   .preview {
-    margin: 8rem auto 0;
+    margin: 6rem auto 0;
     max-width: 1000px;
     display: flex;
     padding-bottom: 0;
@@ -57,5 +61,9 @@
 
   .styled_link {
     align-self: flex-end;
+  }
+
+  .preview_title {
+    display: none;
   }
 }

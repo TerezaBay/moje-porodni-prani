@@ -1,25 +1,75 @@
-/* toto bude vesměs platit pro více jak 960 px */
-
 .form_main {
-  padding-top: 10rem;
+  margin-bottom: 4rem;
 }
 
-.formtext_container {
-  margin-top: 5rem;
-  margin-left: 20rem;
-  /* dořešit po routeru s meníčkem position fixed */
+.formtext_container,
+.form {
+  padding: 0 2rem;
 }
 
 .form_main .title-div {
-  margin-left: 18rem;
-  margin-right: 40%;
+  margin: 4rem 0;
 }
 
-.form {
-  margin-top: 5rem;
-  margin-left: 20rem;
+.form_main h3 {
+  font-size: 18px;
 }
 
-.formtext p {
-  margin: 0 0 1em;
+.form_main .quest {
+  margin-top: 4rem;
+}
+
+.form_main .extra_text {
+  font-style: italic;
+  cursor: initial;
+}
+
+@media (min-width: 768px) {
+  .form_main {
+    padding-top: 11rem;
+    min-height: 82vh;
+    /* toto by ještě chtělo vylepšit */
+  }
+
+  .form_main .title-div {
+    margin: 6rem 0;
+    margin-right: 30%;
+  }
+
+  .form_main h3 {
+    font-size: 20px;
+  }
+
+  .formtext_container,
+  .form {
+    margin: 0 auto;
+    /* proč toto zarovnání nefunguje */
+  }
+}
+
+@media (min-width: 960px) {
+  .form_main {
+    padding-top: 5rem;
+    margin-bottom: 6rem;
+  }
+
+  .formtext_container,
+  .form {
+    margin-left: 19rem;
+    max-width: 1000px;
+    /* toto se musí dát do středu, ale hernajs jak to udělat*/
+  }
+
+  .form_main .title-div {
+    margin-left: 19rem;
+    margin-right: 35%;
+  }
+
+  .form_main .quest {
+    margin-top: 5rem;
+  }
+
+  .formtext p {
+    margin: 0 0 1em;
+  }
 }

@@ -53,9 +53,10 @@
   margin-top: 45%;
 }
 
-/* odsazení pro mobilní navigaci: */
-header {
-  margin-top: 3rem;
+.header_title-text,
+.header_title,
+.header_logo {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 768px) {
@@ -70,17 +71,6 @@ header {
   }
   .header_homepage .video_wrapper video {
     object-fit: cover;
-  }
-  .header_homepage .video_wrapper::before {
-    content: '';
-    z-index: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.18);
   }
 
   header {

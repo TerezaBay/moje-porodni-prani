@@ -1,9 +1,5 @@
-.article_main {
-  margin-top: 4rem;
-}
-
 .article_main .title-div_short {
-  margin-bottom: 0rem;
+  margin: 4rem 0;
 }
 
 .article_main .section_quote {

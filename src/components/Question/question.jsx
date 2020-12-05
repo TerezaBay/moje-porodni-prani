@@ -4,7 +4,6 @@ import QuestionInput from '../QuestionInput/questInput.jsx';
 import QuestionTextArea from '../QuestionTextArea/QuestionTextArea.jsx';
 import QuestionLongTextArea from '../QuestionLongTextArea/QuestionLongTextArea.jsx';
 import QuestionRadioButton from '../QuestionRadioButton/questRadioButton.jsx';
-import './style.css';
 
 const Question = ({ quest }) => {
   const selectQuestionType = (quest) => {

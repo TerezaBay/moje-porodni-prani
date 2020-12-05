@@ -23,7 +23,7 @@ export const routes = [
 export const links = [
   { name: 'Domů', url: `${routes[0].path}` },
   { name: 'Sestavit přání', url: `${routes[1].path}` },
-  { name: 'Užitečné informace', url: `${routes[2].path}` },
+  { name: 'Další užitečné informace', url: `${routes[2].path}` },
 ];
 
 export const routesForm = [

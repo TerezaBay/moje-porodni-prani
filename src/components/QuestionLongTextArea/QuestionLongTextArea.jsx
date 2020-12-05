@@ -20,9 +20,11 @@ const QuestionLongTextArea = ({ quest }) => {
         <TextArea
           key={i}
           text={answer}
+          extraText={quest.example}
+          classN="longTextArea"
           value={formState[quest.id]?.value[i] || ''}
           func={(value) => handleChange(value, i)}
-          maxLength={600}
+          maxLength={450}
         />
       ))}
     </>
