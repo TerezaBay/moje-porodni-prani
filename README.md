@@ -7,7 +7,8 @@ Základní nastavení projektu pro Reactovou webovou aplikaci s Webpackem.
 1. Nainstalujte závislosti příkazem `npm install`.
 2. A příkaz `npm install react-responsive --save`.
 3. A pak nainstalovat react router: `npm install react-router-dom`
-4. Spusťte watch s dev serverem příkazem `npm run start`.
+4. Poté `npm install firebase`
+5. Spusťte watch s dev serverem příkazem `npm run start`.
 
 ## Produkční sestavení
 

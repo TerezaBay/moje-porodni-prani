@@ -16,8 +16,6 @@ const Form11End = () => {
 
   useEffect(() => {
     formRef.current.submit();
-    setFormState([])
-    // toto nefunguje
   }, []);
 
   return (

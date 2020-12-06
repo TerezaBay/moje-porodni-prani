@@ -1,8 +1,31 @@
 import React, { createContext, useContext, useState, useMemo } from 'react';
-
+import { db } from '../db.js';
+import firebase from 'firebase/app';
 import { formQuest } from '../texts/formTexts.js';
 
 const initialFormState = Array(formQuest.length).fill(undefined);
+
+// const [docId, setDocId] = useState()
+
+const createFormContextValue = ({ formState, setFormState }) => {
+  
+  
+  return {
+    formState,
+    setFormState: (value, i) => {
+      const newValue = [...formState];
+      
+      newValue[i] = value;
+      // console.log(newValue)
+      
+      setFormState(newValue);
+      
+      const document = db.collection("porodni-prani").doc(docId);
+      document.set(newValue);
+      formState(docId);
+    },
+  };
+}
 
 const FormContext = createContext(
   createFormContextValue({
@@ -12,11 +35,11 @@ const FormContext = createContext(
   }),
 );
 
-export function useFormContext() {
+export const useFormContext = () => {
   return useContext(FormContext);
 }
 
-export function FormContextProvider({ children }) {
+export const FormContextProvider = ({ children }) => {
   const [formState, setFormState] = useState(initialFormState);
 
   const formContextValue = useMemo(() => {
@@ -30,19 +53,6 @@ export function FormContextProvider({ children }) {
   );
 }
 
-function createFormContextValue({ formState, setFormState }) {
-  return {
-    formState,
-    setFormState: (value, i) => {
-      const newValue = [...formState];
-
-      newValue[i] = value;
-      // console.log(newValue)
-
-      setFormState(newValue);
-    },
-  };
-}
 
 export const isFormValid = (formState) => {
   if (formState.length !== formQuest.length) {
