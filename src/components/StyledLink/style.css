@@ -55,12 +55,12 @@
 
 .styled_link .default:hover,
 .styled_link .default:focus,
-.styled_link .burgundy:hover,
-.styled_link .burgundy:focus {
+/* .styled_link .burgundy:focus, */
+.styled_link .burgundy:hover {
   background-color: #8d5e6e;
 }
 
-.styled_link .grey:hover,
-.styled_link .grey:focus {
+/* .styled_link .grey:focus, */
+.styled_link .grey:hover {
   background-color: #93939f;
 }
