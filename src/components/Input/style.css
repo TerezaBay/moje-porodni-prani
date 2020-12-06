@@ -3,7 +3,7 @@
 }
 
 .input input {
-  margin-left: 0.5rem;
+  display: block;
   min-width: 14rem;
   /* height: 1.2rem; */
 }
@@ -14,11 +14,20 @@
   cursor: pointer;
 }
 
-.input, .input_label {
+.input,
+.input_label {
   margin-bottom: 2px;
 }
 
 @media (min-width: 768px) {
+  .input {
+    display: flex;
+  }
+
+  .input input {
+    display: inline-block;
+    margin-left: 1rem;
+  }
   .input_label {
     padding-left: 3rem;
   }

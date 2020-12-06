@@ -4,7 +4,7 @@
 
 .formtext_container,
 .form {
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .form_main .title-div {
@@ -20,8 +20,21 @@
 }
 
 .form_main .extra_text {
+  font-size: 1rem;
   font-style: italic;
   cursor: initial;
+  padding-left: 2rem;
+  border-left: 2px solid #eee;
+  margin: 3rem 0;
+  margin-left: -2rem;
+}
+.form_main .extra_text::before {
+  position: relative;
+  content: '"';
+}
+.form_main .extra_text::after {
+  position: absolute;
+  content: '"';
 }
 
 .form_main textarea,
@@ -31,9 +44,10 @@
 }
 
 .form_buttons {
+  padding: 0 1rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -78,6 +92,10 @@
 }
 
 @media (min-width: 768px) {
+  .formtext_container,
+  .form {
+    padding: 0 2rem;
+  }
   .form_main {
     padding-top: 11rem;
   }
@@ -101,6 +119,7 @@
   }
 
   .form_buttons {
+    padding: 0;
     flex-direction: row;
     justify-content: flex-end;
     margin-bottom: 2rem;
@@ -144,5 +163,8 @@
 
   .form_buttons .styled_link a {
     margin: 1rem 0 4rem 4rem;
+  }
+  .form_main .extra_text {
+    margin-left: inherit;
   }
 }

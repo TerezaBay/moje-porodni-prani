@@ -3,16 +3,18 @@
 }
 
 .checkbox input {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
 .checkbox_label {
   display: inline-block;
-  padding-left: 1rem;
+  text-indent: -2rem;
+  padding-left: 2rem;
   cursor: pointer;
 }
 
-.checkbox, .checkbox_label {
+.checkbox,
+.checkbox_label {
   margin-bottom: 2px;
 }
 

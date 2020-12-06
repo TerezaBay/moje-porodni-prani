@@ -3,16 +3,18 @@
 }
 
 .radio_button input {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
 .radio_button_label {
   display: inline-block;
-  padding-left: 1rem;
+  text-indent: -2rem;
+  padding-left: 2rem;
   cursor: pointer;
 }
 
-.radio_button, .radio_button_label {
+.radio_button,
+.radio_button_label {
   margin-bottom: 2px;
 }
 
