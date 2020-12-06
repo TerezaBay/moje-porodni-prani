@@ -18,7 +18,7 @@ const Form01Start = () => {
           <p>{formTexts[0].text[1]}</p>
           <p className="link_firebase">
             <Link
-              to={{ pathname: '/formhome/', search: '?id=' + formState.docId }}
+              to={{ pathname: '/formhome', search: '?id=' + formState.docId }}
             >
               Trvalý odkaz
             </Link>
