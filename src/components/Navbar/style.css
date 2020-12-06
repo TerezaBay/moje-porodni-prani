@@ -44,7 +44,7 @@
 
 .navbar_link {
   display: block;
-  padding: 10px;
+  padding: 1rem;
   list-style: none;
   text-decoration: none;
   color: #fff;
@@ -93,7 +93,7 @@
   /* ostatní */
   .navbar_logo {
     margin-left: 3rem;
-    font-size: 30px;
+    font-size: 26px;
   }
 
   .navbar_container {
@@ -116,3 +116,9 @@
 /* * {
   border: 1px solid darkblue;
 } */
+
+@media (min-width: 960px) {
+  .navbar_logo {
+    font-size: 30px;
+  }
+}
