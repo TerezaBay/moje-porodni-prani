@@ -16,8 +16,9 @@ export const formTexts = [
   {
     title: 'Chci si vytvořit své porodní přání. Ale jak na to?',
     text: [
-      'Čekají tě otázky týkající se různých fází porodu. Dej si na jejich zodpovězení dostatek času. Pokud budeš nad některým bodem váhat nebo ti nebude úplně jasný, přečti si o tématu více na našem blogu, případně otázku přeskoč a vrať se k ní později. Po zodpovězení všech otázek ti vygenerujeme seznam tvých porodních přání.',
-      'Seznam tvých porodních přání dostane jedinečnou url adresu, kterou budeš moci sdílet se svým porodním týmem, partnerem nebo kýmkoli jiným. Seznam přání si můžeš také vytisknout či uložit pro svoji osobní potřebu.',
+      'Čekají tě otázky týkající se různých fází porodu. Dej si na jejich zodpovězení dostatek času. Pokud budeš nad některým bodem váhat nebo ti nebude úplně jasný, přečti si o tématu více na našem blogu, případně otázku přeskoč a vrať se k ní později. Po zodpovězení všech otázek ti vygenerujeme seznam tvých porodních přání v PDF.',
+      'Současně tvůj seznam dostal jedinečnou url adresu, pod kterou budeš moci svůj seznam kdykoliv otevřít a kterou budeš moci sdílet se svým porodním týmem, partnerem nebo kýmkoli jiným. Tato adresa je uložena v odkaze níže:',
+      "Seznam přání si můžeš vytisknout či uložit pro svoji osobní potřebu.",
       'Dokud svůj seznam nezveřejníš, nikdo se k němu nedostane. Tvá data jsou v bezpečí. Svá přání můžeš kdykoli změnit a vygenerovat nový seznam.',
       'Pamatuj, seznam porodních přání je nástroj, který by měl usnadnit komunikaci potřeb a preferencí mezi rodičkou a personálem porodnice. Platí, že čím je porodní přání stručnější, tím lépe a rychleji mu ostatní porozumí. Vybírej tedy jen ty body, které jsou pro tebe opravdu důležité.',
     ],

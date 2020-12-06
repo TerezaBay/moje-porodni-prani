@@ -27,7 +27,7 @@ export const links = [
 ];
 
 export const routesForm = [
-  { path: '/formhome/', component: Form01Start, exact: true },
+  { path: '/formhome', component: Form01Start, exact: true },
   { path: '/formhome/form02BasicInfo', component: Form02BasicInfo },
   { path: '/formhome/form03BeforeBirth', component: Form03BeforeBirth },
   { path: '/formhome/form04PreLabour', component: Form04PreLabour },
