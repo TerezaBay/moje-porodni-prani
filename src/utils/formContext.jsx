@@ -81,11 +81,11 @@ export const FormContextProvider = ({ children }) => {
 };
 
 export const isFormValid = (formState) => {
-  if (formState.length !== formQuest.length) {
+  if (formState.form.length !== formQuest.length) {
     return false;
   }
   // filter only invalid questions
-  const invalidQuestionList = formState.filter((quest, i) => {
+  const invalidQuestionList = formState.form.filter((quest, i) => {
     if (!!formQuest[i].isOptional) {
       return false; // optional question no need to validate anymore
     }

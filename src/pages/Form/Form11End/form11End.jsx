@@ -11,7 +11,7 @@ import '../style.css';
 
 const Form11End = () => {
   const { formState, setFormState } = useFormContext();
-  const formJSON = JSON.stringify(formState);
+  const formJSON = JSON.stringify(formState.form);
   const formRef = useRef(null);
 
   useEffect(() => {
