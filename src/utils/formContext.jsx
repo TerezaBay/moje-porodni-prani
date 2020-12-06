@@ -27,7 +27,7 @@ const initialFormState = {
 };
 
 const createFormContextValue = ({ formState, setFormState }) => {
-  
+
   return {
     formState,
     setFormState: (value, i) => {
