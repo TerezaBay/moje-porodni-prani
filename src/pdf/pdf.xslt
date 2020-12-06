@@ -106,7 +106,7 @@
             <xsl:if test="fn:contains-token(@class, 'italic')">
                 <xsl:attribute name="font-style">italic</xsl:attribute>
             </xsl:if>
-            <xsl:if test="fn:local-name(*[1]) = 'strong'">
+            <xsl:if test="fn:local-name(*[1]) = 'strong' and empty(ancestor::html:header)">
                 <xsl:attribute name="margin-top">2mm</xsl:attribute>
             </xsl:if>
             <xsl:apply-templates/>

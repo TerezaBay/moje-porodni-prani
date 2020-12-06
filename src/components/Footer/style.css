@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  font-size: 12px;
 }
 
 .footer_copyright {
@@ -21,6 +22,7 @@
     justify-content: space-between;
     align-items: center;
     height: 76px;
+    font-size: 16px;
   }
 
   .footer_copyright {
