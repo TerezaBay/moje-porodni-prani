@@ -15,7 +15,13 @@ const FormHome = () => {
       (route) => route.path === location.pathname,
     );
     setCurrentLocationIndex(currentLocIndex);
+
+    console.log("location.pathname = " + location.pathname)
+    console.log("routesForm[0] = " + routesForm[0].path)
+
   }, [location]);
+
+  console.log("currentLocI = " + currentLocationIndex)
 
   const nextUrl = () => {
     if (currentLocationIndex + 1 < routesForm.length - 1) {
@@ -23,6 +29,9 @@ const FormHome = () => {
     }
     return false;
   };
+
+  console.log("nextUrl = " + nextUrl())
+  console.log("---------")
 
   const prevUrl = () => {
     if (currentLocationIndex > 0) {

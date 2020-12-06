@@ -9,7 +9,6 @@ const initialFormState = Array(formQuest.length).fill(undefined);
 
 const createFormContextValue = ({ formState, setFormState }) => {
   
-  
   return {
     formState,
     setFormState: (value, i) => {
