@@ -41,5 +41,5 @@ export const home = {
     },
   ],
   footerCopyright: '© 2020 Moje porodní přání. Všechna práva vyhrazena.',
-  footerCredits: 'Vytvořeno díky Czechitas a. s., icons by Freepik',
+  footerCredits: 'Vytvořeno díky Czechitas z. s., icons by Freepik',
 };
