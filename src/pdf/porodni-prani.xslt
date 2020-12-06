@@ -84,7 +84,7 @@
 
     <xsl:template match="/json/json[3]">
         <xsl:if test="exists(value)">
-            <p class="small">
+            <p class="small h3">
                 <strong>
                     <xsl:text>Poznámky ke zdravotnímu stavu: </xsl:text>
                 </strong>
@@ -95,7 +95,7 @@
     </xsl:template>
 
     <xsl:template match="/json/json[4]">
-        <xsl:if test="exists(value)">
+        <xsl:if test="exists(value) and value != ''">
             <p class="small">
                 <strong>
                     <xsl:text>Specifické potřeby: </xsl:text>
@@ -167,10 +167,10 @@
 
     <xsl:template match="/json/json[8]">
         <xsl:if test="exists(value)">
-            <p>
+            <p class="h3">
                 <strong>Tlumení bolesti</strong>
             </p>
-            <p>
+            <p class="h3">
                 <strong>
                     <xsl:text>Upřednostňuji tyto nefarmakologické metody: </xsl:text>
                 </strong>
@@ -301,7 +301,7 @@
     </xsl:template>
 
     <xsl:template match="/json/json[13]">
-        <xsl:if test="exists(value)">
+        <xsl:if test="exists(value) and vlue != ''">
             <p>
                 <strong>
                     <xsl:text>Placenta: </xsl:text>
@@ -313,7 +313,7 @@
 
     <xsl:template match="/json/json[14]">
         <xsl:if test="exists(value)">
-            <p>
+            <p class="h3">
                 <strong>
                     <xsl:text>Prosím, aby dítě NEPODSTOUPILO: </xsl:text>
                 </strong>

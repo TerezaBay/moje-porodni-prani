@@ -17,13 +17,13 @@ export const home = {
       authorsImg: 'assets/authors/vera.jpg',
       authorsName: 'Věra Staňková',
       authorsText:
-        'Věrka pracuje pro skvělou neziskovku Aperio. Je hlavním nositelem nápadu a určitě se vyřádí na stylování! Má velikou radost, že projekt začíná dostávat pevné obrysy, a doufá, že aplikace brzy pomůže prvním nastávajícím rodičům s přípravou na porod.',
+        'Věrka pracuje pro skvělou neziskovku Aperio. Je hlavním nositelem nápadu a při realizaci projektu se vyřádila na CSS stylech! Má velikou radost, že se projekt podařilo dotáhnout do konce, a doufá, že aplikace brzy pomůže prvním nastávajícím rodičům s přípravou na porod.',
     },
     {
       authorsImg: 'assets/authors/Terka.jpg',
       authorsName: 'Tereza Bařinková',
       authorsText:
-        'Terka absolvovala výcvik prenatální psychologie, díky čemuž si uvědomila, nakolik je příchod na tento svět důležitý. A jelikož se z ní stává naprostý nadšenec pro webový vývoj a React, udělá co je v jejích silách, aby si aplikace co nejdříve našla cestu ke svým uživatelům. ',
+        'Terka absolvovala výcvik prenatální psychologie, díky čemuž si uvědomila, nakolik je příchod na tento svět důležitý. A jelikož se z ní stává naprostý nadšenec pro webový vývoj a React, udělala co bylo v jejích silách, aby si aplikace co nejdříve našla cestu ke svým uživatelům.',
     },
   ],
   footerCopyright: '© 2020 Moje porodní přání. Všechna práva vyhrazena.',

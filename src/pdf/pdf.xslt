@@ -44,7 +44,7 @@
     </xsl:template>
 
     <xsl:template match="html:header">
-        <fo:block-container absolute-position="absolute" relative-position="fixed" background-color="#89455d" color="white" top="0" left="0" height="24mm"
+        <fo:block-container absolute-position="absolute" background-color="#89455d" color="white" top="0" left="0" height="24mm"
                             width="310mm">
             <fo:table table-layout="fixed" width="297mm">
                 <fo:table-column column-width="110mm"/>
@@ -99,15 +99,18 @@
     </xsl:template>
 
     <xsl:template match="html:p">
-        <fo:block text-align="justify" margin-bottom="1mm">
+        <fo:block margin-bottom="1mm">
             <xsl:if test="fn:contains-token(@class, 'small')">
                 <xsl:attribute name="font-size">9pt</xsl:attribute>
             </xsl:if>
             <xsl:if test="fn:contains-token(@class, 'italic')">
                 <xsl:attribute name="font-style">italic</xsl:attribute>
             </xsl:if>
-            <xsl:if test="fn:local-name(*[1]) = 'strong' and empty(ancestor::html:header)">
+            <xsl:if test="fn:contains-token(@class, 'h3')">
                 <xsl:attribute name="margin-top">2mm</xsl:attribute>
+            </xsl:if>
+            <xsl:if test="exists(ancestor::html:aside)">
+                <xsl:attribute name="text-align">justify</xsl:attribute>
             </xsl:if>
             <xsl:apply-templates/>
         </fo:block>
