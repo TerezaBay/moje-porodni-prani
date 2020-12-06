@@ -1,8 +1,8 @@
-import React from 'react';
-import './style.css';
+import React from "react";
+import "./style.css";
 
-import RadioButton from '../RadioButton/radioButton';
-import { useFormContext } from '../../utils/formContext.jsx';
+import RadioButton from "../RadioButton/radioButton";
+import { useFormContext } from "../../utils/formContext.jsx";
 
 const QuestionRadioButton = ({ quest }) => {
   const { formState, setFormState } = useFormContext();
@@ -19,7 +19,7 @@ const QuestionRadioButton = ({ quest }) => {
           name={`radio-${quest.id}`}
           func={(value) => handleChange(value)}
           value={i}
-          checked={formState[quest.id]?.value === String(i)}
+          checked={formState.form[quest.id]?.value === String(i)}
           text={answer}
         />
       ))}

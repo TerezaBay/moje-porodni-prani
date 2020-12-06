@@ -1,42 +1,70 @@
-import React, { createContext, useContext, useState, useMemo } from 'react';
-import { db } from '../db.js';
-import firebase from 'firebase/app';
-import { formQuest } from '../texts/formTexts.js';
+import React, { createContext, useContext, useState, useMemo } from "react";
+import { db } from "../db.js";
+import { formQuest } from "../texts/formTexts.js";
 
-const initialFormState = Array(formQuest.length).fill(undefined);
-
-// const [docId, setDocId] = useState()
+const initialFormState = {
+  docId: null,
+  form: formQuest.map((question) => {
+    const result = { type: question.type };
+    switch (question.type) {
+      case "checkbox":
+        result.value = Array(question.answers.length).fill(false);
+        result.noPrevious = false;
+        break;
+      case "radioButton":
+        result.value = null;
+        break;
+      case "input":
+        result.value = Array(question.answers.length).fill(null);
+        break;
+      case "textArea":
+      case "longTextArea":
+        result.value = [null];
+        break;
+    }
+    return result;
+  }),
+};
 
 const createFormContextValue = ({ formState, setFormState }) => {
   
   return {
     formState,
     setFormState: (value, i) => {
-      const newValue = [...formState];
-      
-      newValue[i] = value;
-      // console.log(newValue)
-      
-      setFormState(newValue);
-      
-      const document = db.collection("porodni-prani").doc(docId);
-      document.set(newValue);
-      formState(docId);
+      let newState = {
+        ...formState,
+      };
+      if (typeof i === "string") {
+        switch (i) {
+          case "docId":
+            newState.docId = value;
+            break;
+          case "all":
+            newState = value;
+            break;
+        }
+      } else {
+        newState.form = [...formState.form];
+        newState.form[i] = value;
+      }
+
+      // console.log(newState)
+      setFormState(newState);
     },
   };
-}
+};
 
 const FormContext = createContext(
   createFormContextValue({
     formState: initialFormState,
     setFormState: () =>
-      console.error('You are using FormContext without FormContextProvider!'),
-  }),
+      console.error("You are using FormContext without FormContextProvider!"),
+  })
 );
 
 export const useFormContext = () => {
   return useContext(FormContext);
-}
+};
 
 export const FormContextProvider = ({ children }) => {
   const [formState, setFormState] = useState(initialFormState);
@@ -50,8 +78,7 @@ export const FormContextProvider = ({ children }) => {
       {children}
     </FormContext.Provider>
   );
-}
-
+};
 
 export const isFormValid = (formState) => {
   if (formState.length !== formQuest.length) {
@@ -63,7 +90,7 @@ export const isFormValid = (formState) => {
       return false; // optional question no need to validate anymore
     }
 
-    if (typeof quest === 'undefined') {
+    if (quest === null) {
       return true; // mandatory question is invalid
     }
 
@@ -71,15 +98,15 @@ export const isFormValid = (formState) => {
 
     // validation for each question type
     switch (quest.type) {
-      case 'checkbox':
+      case "checkbox":
         return !isCheckboxQuestionValid(quest, i);
-      case 'input':
+      case "input":
         return quest.value.length !== questOptionCount; // all inputs are filled
-      case 'textArea':
+      case "textArea":
         return quest.value.length !== questOptionCount; // same as "input"
-      case 'longTextArea':
+      case "longTextArea":
         return quest.value.length !== questOptionCount; // same as "input"
-      case 'radioButton':
+      case "radioButton":
         return !quest.value; // radio option is checked
     }
 

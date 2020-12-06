@@ -1,14 +1,14 @@
-import React from 'react';
-import TextArea from '../TextArea/textArea';
-import './style.css';
+import React from "react";
+import TextArea from "../TextArea/textArea";
+import "./style.css";
 
-import { useFormContext } from '../../utils/formContext.jsx';
+import { useFormContext } from "../../utils/formContext.jsx";
 
 const QuestionTextArea = ({ quest }) => {
   const { formState, setFormState } = useFormContext();
 
   const handleChange = (value, i) => {
-    const newAnswered = [...(formState[quest.id]?.value || [])];
+    const newAnswered = [...(formState.form[quest.id]?.value || [])];
     newAnswered[i] = value;
 
     setFormState({ type: quest.type, value: newAnswered }, quest.id);
@@ -22,7 +22,7 @@ const QuestionTextArea = ({ quest }) => {
           text={answer}
           extraText={false}
           classN="textArea"
-          value={formState[quest.id]?.value[i] || ''}
+          value={formState.form[quest.id]?.value[i] || ""}
           func={(value) => handleChange(value, i)}
           maxLength={150}
         />
