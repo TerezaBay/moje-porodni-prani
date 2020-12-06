@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import "./style.css";
+import React, { useState } from 'react';
 
-import Checkbox from "../../components/Checkbox/checkbox.jsx";
-import { useFormContext } from "../../utils/formContext.jsx";
+import Checkbox from '../../components/Checkbox/checkbox.jsx';
+import { useFormContext } from '../../utils/formContext.jsx';
 
 const QuestionCheckbox = ({ quest }) => {
   const { formState, setFormState } = useFormContext();
@@ -13,7 +12,7 @@ const QuestionCheckbox = ({ quest }) => {
       : formState.form[quest.id].value.length === 0;
 
   const [noPreviousChecked, setNoPreviousChecked] = useState(
-    noPreviousCheckedDefault
+    noPreviousCheckedDefault,
   );
 
   const handleChange = (value, i) => {
@@ -32,7 +31,7 @@ const QuestionCheckbox = ({ quest }) => {
 
     setFormState(
       { type: quest.type, value: newChecked, noPrevious: false },
-      quest.id
+      quest.id,
     );
   };
 
@@ -42,7 +41,7 @@ const QuestionCheckbox = ({ quest }) => {
     if (value) {
       setFormState(
         { type: quest.type, value: [], noPrevious: value },
-        quest.id
+        quest.id,
       );
     }
   };

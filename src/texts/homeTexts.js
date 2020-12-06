@@ -1,11 +1,5 @@
 export const home = {
-  // odkazy header + styled links
   logo: 'Moje porodní přání',
-  // logoLink: "#header",
-  // button1Text: 'Sestavit přání',
-  // button1Url: '#main',
-  // button2Text: 'Užitečné informace',
-  // button2Url: '#authors',
   button3Text: 'Sestavit porodní přání',
 
   // titles header
@@ -13,14 +7,6 @@ export const home = {
   titleText:
     'Sestav si své porodní přání na míru. Jednoduše, přehledně, s respektem.',
 
-  // mainListText: [
-  //   'sestavit si porodní plán podle svých potřeb a představ,',
-  //   'informovat se o jednotlivých možnostech,',
-  //   'zjistit, co je pro ně u porodu opravdu důležité,',
-  //   'sdílet porodní plán s ostatními,',
-  //   'uložit si rozpracovaný porodní plán a vrátit se k němu později,',
-  //   'hotový plán si jednoduše vytisknout dle předpřipravené šablony.',
-  // ],
   emphaText:
     'Zdarma získáš přehledný porodní plán, který si budeš moci vzít do porodnice. Nemusíš se nikam registrovat. K tvým datům budeš mít přístup jen ty a lidé, se kterými svůj plán nasdílíš.',
 

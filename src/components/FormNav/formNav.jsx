@@ -9,7 +9,13 @@ const FormNav = () => (
     <ul className="form-nav_links">
       {formTitleLink.slice(0, 10).map((titleLink, i) => (
         <li key={i}>
-          <NavLink exact to={titleLink.link} activeClassName="form-nav--selected">{titleLink.title}</NavLink>
+          <NavLink
+            exact
+            to={titleLink.link}
+            activeClassName="form-nav--selected"
+          >
+            {titleLink.title}
+          </NavLink>
         </li>
       ))}
     </ul>

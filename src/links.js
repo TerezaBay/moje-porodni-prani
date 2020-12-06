@@ -1,6 +1,5 @@
 import Homepage from './pages/Homepage/homepage.jsx';
 import Info from './pages/Info/info.jsx';
-import Article from './pages/Homepage/homepage.jsx';
 import FormHome from './pages/Form/Form00Home/formHome.jsx';
 import Form01Start from './pages/Form/Form01Start/form01Start.jsx';
 import Form02BasicInfo from './pages/Form/Form02BasicInfo/form02BasicInfo.jsx';

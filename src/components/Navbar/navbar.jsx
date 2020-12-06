@@ -21,12 +21,12 @@ const Navbar = () => {
       return () => window.removeEventListener('scroll', handleScroll);
     }
   }, [location]);
-  
+
   // onClick scroll to top on homepage (pathname is not changed)
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
-  
+
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   const handleClick = () => {

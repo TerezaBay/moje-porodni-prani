@@ -29,7 +29,7 @@ hover oranžové tlačítko:#f4c737
 hover šedé tlačítko: #93939f
   */
 
-/* MARGINY:
+/* MARGINs:
 mobily:
   mt-4
   mb-4;
@@ -52,10 +52,6 @@ html {
 :before {
   box-sizing: inherit;
 }
-
-/* * {
-  border: 1px solid rgb(109, 61, 136);
-} */
 
 .app {
   min-height: 100vh;

@@ -1,4 +1,3 @@
-/* Styly pro hlavičku (: */
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
 
 .header_homepage {
@@ -21,33 +20,14 @@
   font-size: 2.5em;
 }
 
-/* .header_nav { */
-/* display: flex; */
-/* flex-direction: column; */
-/* align-items: center; */
-/* justify-content: space-between; */
-/* } */
-
 .header_menu {
   position: relative;
   min-width: 30%;
 }
 
-/* .header_menu-buttons {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding: 0;
-  justify-content: space-between;
-} */
-
 .header_menu-buttons {
   display: none;
 }
-
-/* .header_menu-buttons li {
-  display: inline-block;
-} */
 
 .header_content {
   margin-top: 45%;
@@ -73,7 +53,6 @@
     padding: 5px 10px;
   }
 
-  /* .header_menu-buttons, */
   .header_nav {
     position: relative;
     z-index: 2;
@@ -107,6 +86,7 @@
     height: 100%;
     overflow: hidden;
   }
+
   .header_homepage .video_wrapper::before {
     content: '';
     display: block;
@@ -123,11 +103,13 @@
       rgba(0, 0, 0, 0.5) 100%
     );
   }
+
   .header_homepage .video_wrapper video {
     height: 100%;
     width: 100%;
     object-fit: cover;
   }
+
   .header_menu-buttons .styled_link a {
     padding: 10px 30px;
   }

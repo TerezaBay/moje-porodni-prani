@@ -1,13 +1,12 @@
 import React from 'react';
-import Question from '../../../components/Question/question.jsx';
 import Title from '../../../components/Title/title.jsx';
-import { formTexts, formTitleLink } from '../../../texts/formTexts.js';
+import { formTexts } from '../../../texts/formTexts.js';
 import '../style.css';
 import { useFormContext } from '../../../utils/formContext.jsx';
 import { Link } from 'react-router-dom';
 
 const Form01Start = () => {
-  const { formState, setFormState } = useFormContext();
+  const { formState } = useFormContext();
 
   return (
     <main className="form_main">

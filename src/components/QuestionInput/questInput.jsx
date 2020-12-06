@@ -1,8 +1,7 @@
-import React from "react";
-import Input from "../Input/input";
-import "./style.css";
+import React from 'react';
+import Input from '../Input/input';
 
-import { useFormContext } from "../../utils/formContext.jsx";
+import { useFormContext } from '../../utils/formContext.jsx';
 
 const QuestionInput = ({ quest }) => {
   const { formState, setFormState } = useFormContext();
@@ -20,7 +19,7 @@ const QuestionInput = ({ quest }) => {
         <Input
           key={i}
           input={answer}
-          value={formState.form[quest.id]?.value[i] || ""}
+          value={formState.form[quest.id]?.value[i] || ''}
           func={(value) => handleChange(value, i)}
         />
       ))}

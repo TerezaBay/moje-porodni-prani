@@ -1,23 +1,17 @@
-import React from "react";
-import { render } from "react-dom";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useLocation,
-} from "react-router-dom";
-import { home } from "./texts/homeTexts.js";
-import { articleTexts } from "./texts/articleTexts.js";
-import { routes } from "./links.js";
-import "./index.html";
-import "./style.css";
+import React from 'react';
+import { render } from 'react-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { home } from './texts/homeTexts.js';
+import { articleTexts } from './texts/articleTexts.js';
+import { routes } from './links.js';
+import './index.html';
+import './style.css';
 
-import Navbar from "./components/Navbar/navbar.jsx";
-import Footer from "./components/Footer/footer.jsx";
-import Article from "./components/Article/article.jsx";
-import ScrollToTop from "./components/ScrollToTop/scrollToTop.jsx";
-import { FormContextProvider } from "./utils/formContext.jsx";
+import Navbar from './components/Navbar/navbar.jsx';
+import Footer from './components/Footer/footer.jsx';
+import Article from './components/Article/article.jsx';
+import ScrollToTop from './components/ScrollToTop/scrollToTop.jsx';
+import { FormContextProvider } from './utils/formContext.jsx';
 
 const App = () => {
   return (
@@ -54,4 +48,4 @@ const App = () => {
   );
 };
 
-render(<App />, document.querySelector("#app"));
+render(<App />, document.querySelector('#app'));

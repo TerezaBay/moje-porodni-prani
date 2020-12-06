@@ -13,13 +13,7 @@ import Service from '../../components/Service/service.jsx';
 import Author from '../../components/Author/author.jsx';
 import StyledLink from '../../components/StyledLink/styledLink.jsx';
 
-const HomepageMain = ({
-  // emphaText,
-  // previewTitle,
-  // authors,
-  // button2Text,
-  // button2Url,
-}) => (
+const HomepageMain = () => (
   <>
     <SectionQuote text={sectionTexts.section1} />
 

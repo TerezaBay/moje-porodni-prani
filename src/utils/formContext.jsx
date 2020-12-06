@@ -1,24 +1,23 @@
-import React, { createContext, useContext, useState, useMemo } from "react";
-import { db } from "../db.js";
-import { formQuest } from "../texts/formTexts.js";
+import React, { createContext, useContext, useState, useMemo } from 'react';
+import { formQuest } from '../texts/formTexts.js';
 
 const initialFormState = {
   docId: null,
   form: formQuest.map((question) => {
     const result = { type: question.type };
     switch (question.type) {
-      case "checkbox":
+      case 'checkbox':
         result.value = Array(question.answers.length).fill(false);
         result.noPrevious = false;
         break;
-      case "radioButton":
+      case 'radioButton':
         result.value = null;
         break;
-      case "input":
+      case 'input':
         result.value = Array(question.answers.length).fill(null);
         break;
-      case "textArea":
-      case "longTextArea":
+      case 'textArea':
+      case 'longTextArea':
         result.value = [null];
         break;
     }
@@ -27,19 +26,18 @@ const initialFormState = {
 };
 
 const createFormContextValue = ({ formState, setFormState }) => {
-
   return {
     formState,
     setFormState: (value, i) => {
       let newState = {
         ...formState,
       };
-      if (typeof i === "string") {
+      if (typeof i === 'string') {
         switch (i) {
-          case "docId":
+          case 'docId':
             newState.docId = value;
             break;
-          case "all":
+          case 'all':
             newState = value;
             break;
         }
@@ -58,8 +56,8 @@ const FormContext = createContext(
   createFormContextValue({
     formState: initialFormState,
     setFormState: () =>
-      console.error("You are using FormContext without FormContextProvider!"),
-  })
+      console.error('You are using FormContext without FormContextProvider!'),
+  }),
 );
 
 export const useFormContext = () => {
@@ -98,15 +96,15 @@ export const isFormValid = (formState) => {
 
     // validation for each question type
     switch (quest.type) {
-      case "checkbox":
+      case 'checkbox':
         return !isCheckboxQuestionValid(quest, i);
-      case "input":
+      case 'input':
         return quest.value.length !== questOptionCount; // all inputs are filled
-      case "textArea":
+      case 'textArea':
         return quest.value.length !== questOptionCount; // same as "input"
-      case "longTextArea":
+      case 'longTextArea':
         return quest.value.length !== questOptionCount; // same as "input"
-      case "radioButton":
+      case 'radioButton':
         return !quest.value; // radio option is checked
     }
 

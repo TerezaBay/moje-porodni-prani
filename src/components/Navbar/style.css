@@ -10,7 +10,6 @@
   position: fixed;
   top: 0;
   z-index: 10;
-  /* pro mobily pak musím odsadit header o výšku navigace! */
 }
 
 .navbar_logo {
@@ -52,23 +51,20 @@
   transition: background-color 0.2s ease;
 }
 
-.navbar_link:hover, .navbar_link:focus {
+.navbar_link:hover,
+.navbar_link:focus {
   background-color: #8d5e6e;
 }
 
-/* pro navbar mobil */
+/* for mobile navbar */
 .navbar_links--closed {
   display: none;
 }
 
 @media (min-width: 768px) {
-  /* menu se při breakpointu nezobrazuje dobře, vyřešit až po ujasnění odkazů; pokud měnit breakpoint, změnit veškeré hodnoty! */
-
-  /* styly vyskakovací menu se scrollem */
+  /* styles for scroll-menu */
   .navbar {
     position: fixed;
-    /* top: -76px;
-    transition: all 0.3s ease-in; */
     height: 76px;
     overflow: hidden;
   }
@@ -90,7 +86,7 @@
     left: 0;
   }
 
-  /* ostatní */
+  /* others */
   .navbar_logo {
     margin-left: 3rem;
     font-size: 26px;
@@ -112,10 +108,6 @@
     border-top: 0;
   }
 }
-
-/* * {
-  border: 1px solid darkblue;
-} */
 
 @media (min-width: 960px) {
   .navbar_logo {

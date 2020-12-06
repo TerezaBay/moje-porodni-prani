@@ -1,8 +1,7 @@
-import React from "react";
-import "./style.css";
+import React from 'react';
 
-import RadioButton from "../RadioButton/radioButton";
-import { useFormContext } from "../../utils/formContext.jsx";
+import RadioButton from '../RadioButton/radioButton';
+import { useFormContext } from '../../utils/formContext.jsx';
 
 const QuestionRadioButton = ({ quest }) => {
   const { formState, setFormState } = useFormContext();

@@ -8,9 +8,10 @@ import { useFormContext, isFormValid } from '../../../utils/formContext.jsx';
 
 const Form10Submit = () => {
   const { formState } = useFormContext();
-  console.log('isFormValid', isFormValid(formState)); // TODO remove when this function is finished
+  // form validation check
+  // console.log('isFormValid', isFormValid(formState));
 
-  const handleClick = (e) => {
+  const handleClick = () => {
     isFormValid(formState)
       ? null
       : alert('Formulář nelze odeslat. Prosím vyplňte všechna povinná pole.');

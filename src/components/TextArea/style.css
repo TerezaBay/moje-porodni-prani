@@ -1,4 +1,5 @@
-.text_area textarea, .text_area .longTextArea {
+.text_area textarea,
+.text_area .longTextArea {
   display: block;
   margin-top: 1rem;
   height: 5.5rem;
@@ -15,7 +16,8 @@
   display: flex;
 }
 
-.text_area, .text_text_area {
+.text_area,
+.text_text_area {
   margin-left: 0.5rem;
   min-width: 12rem;
 }
@@ -27,7 +29,8 @@
   cursor: pointer;
 }
 
-.text_area, .text_area_label {
+.text_area,
+.text_area_label {
   margin-bottom: 2px;
 }
 

@@ -1,16 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import Question from '../../../components/Question/question.jsx';
 import Title from '../../../components/Title/title.jsx';
-import {
-  formQuest,
-  formTitleLink,
-  formTexts,
-} from '../../../texts/formTexts.js';
-import { useFormContext, isFormValid } from '../../../utils/formContext.jsx';
+import { formTexts } from '../../../texts/formTexts.js';
+import { useFormContext } from '../../../utils/formContext.jsx';
 import '../style.css';
 
 const Form11End = () => {
-  const { formState, setFormState } = useFormContext();
+  const { formState } = useFormContext();
   const formJSON = JSON.stringify(formState.form);
   const formRef = useRef(null);
 
@@ -45,7 +40,7 @@ const Form11End = () => {
           onChange={() => readOnly}
           rows="10"
           cols="60"
-          style={{display: "none"}}
+          style={{ display: 'none' }}
         />
       </form>
     </main>

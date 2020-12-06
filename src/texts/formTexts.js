@@ -18,7 +18,7 @@ export const formTexts = [
     text: [
       'Čekají tě otázky týkající se různých fází porodu. Dej si na jejich zodpovězení dostatek času. Pokud budeš nad některým bodem váhat nebo ti nebude úplně jasný, přečti si o tématu více na našem blogu, případně otázku přeskoč a vrať se k ní později. Po zodpovězení všech otázek ti vygenerujeme seznam tvých porodních přání v PDF.',
       'Současně tvůj seznam dostal jedinečnou url adresu, pod kterou budeš moci svůj seznam kdykoliv otevřít a kterou budeš moci sdílet se svým porodním týmem, partnerem nebo kýmkoli jiným. Tato adresa je uložena v odkaze níže:',
-      "Seznam přání si můžeš vytisknout či uložit pro svoji osobní potřebu.",
+      'Seznam přání si můžeš vytisknout či uložit pro svoji osobní potřebu.',
       'Dokud svůj seznam nezveřejníš, nikdo se k němu nedostane. Tvá data jsou v bezpečí. Svá přání můžeš kdykoli změnit a vygenerovat nový seznam.',
       'Pamatuj, seznam porodních přání je nástroj, který by měl usnadnit komunikaci potřeb a preferencí mezi rodičkou a personálem porodnice. Platí, že čím je porodní přání stručnější, tím lépe a rychleji mu ostatní porozumí. Vybírej tedy jen ty body, které jsou pro tebe opravdu důležité.',
     ],
@@ -278,9 +278,10 @@ export const formQuest = [
     id: 20,
     quest: 'Osobní úvod',
     type: 'longTextArea',
-    example: "Chtěla bych vám předem ze srdce poděkovat, protože věřím, že se vždy snažíte dělat pro mne a mé dítě to nejlepší. Čekám své první dítě. Chápu, že ne vždy se věci daří tak, jak si je člověk naplánuje - a u porodu to platí dvojnásob. Děkuji, že mi trpělivě vysvětlíte jednotlivé zákroky i potenciální problémy a že budete co nejvíce respektovat předložené preference.",
+    example:
+      'Chtěla bych vám předem ze srdce poděkovat, protože věřím, že se vždy snažíte dělat pro mne a mé dítě to nejlepší. Čekám své první dítě. Chápu, že ne vždy se věci daří tak, jak si je člověk naplánuje - a u porodu to platí dvojnásob. Děkuji, že mi trpělivě vysvětlíte jednotlivé zákroky i potenciální problémy a že budete co nejvíce respektovat předložené preference.',
     answers: [
-      "Zde je prostor pro tvůj osobní úvod porodního přání. Napiš zdravotnickému personálu to nejdůležitější, co ti leží na srdci. Můžeš využít naši předlohu, kterou zkopíruješ do textového pole a podle svých představ upravíš. Anebo si text můžeš zformulovat úplně sama. Pamatuj ale na to, že čím bude úvod stručnější, tím lépe a rychleji mu ostatní porozumí.",
+      'Zde je prostor pro tvůj osobní úvod porodního přání. Napiš zdravotnickému personálu to nejdůležitější, co ti leží na srdci. Můžeš využít naši předlohu, kterou zkopíruješ do textového pole a podle svých představ upravíš. Anebo si text můžeš zformulovat úplně sama. Pamatuj ale na to, že čím bude úvod stručnější, tím lépe a rychleji mu ostatní porozumí.',
     ],
   },
   {
