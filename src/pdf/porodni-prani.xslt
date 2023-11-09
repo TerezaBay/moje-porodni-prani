@@ -116,7 +116,7 @@
                     <li>pokud bude nutné vyvolání porodu, přeji si detailní konzultaci o možnostech</li>
                 </xsl:if>
                 <xsl:if test="value[3] = 'true'">
-                    <li>pokud to bude možné, prosím o přítomnost smluveného lékařee</li>
+                    <li>pokud to bude možné, prosím o přítomnost smluveného lékaře</li>
                 </xsl:if>
             </ul>
         </xsl:if>
@@ -228,7 +228,9 @@
                 <xsl:if test="value[7] = 'true'">
                     <li>vyhnout se porodu kleštěmi</li>
                 </xsl:if>
-
+                <xsl:if test="value[8] = 'true'">
+                    <li>v 2. době porodní preferuji intermitentní poslech ozev dle doporučení WHO</li>
+                </xsl:if>
             </ul>
         </xsl:if>
     </xsl:template>
@@ -257,6 +259,9 @@
                 </xsl:if>
                 <xsl:if test="value[7] = 'true'">
                     <li>provést „vaginální seeding“</li>
+                </xsl:if>
+                <xsl:if test="value[8] = 'true'">
+                    <li>nechat co nejdéle tepat nepřerušený pupečník</li>
                 </xsl:if>
             </ul>
         </xsl:if>
@@ -301,7 +306,7 @@
     </xsl:template>
 
     <xsl:template match="/json/json[13]">
-        <xsl:if test="exists(value) and vlue != ''">
+        <xsl:if test="exists(value) and value != ''">
             <p>
                 <strong>
                     <xsl:text>Placenta: </xsl:text>
@@ -400,7 +405,7 @@
     </xsl:template>
 
     <xsl:template match="/json/json[20]">
-        <xsl:if test="exists(value)">
+        <xsl:if test="exists(value) and value != ''">
             <h2>Další poznámky:</h2>
             <p>
                 <xsl:text>Na porod jsem se připravovala: </xsl:text>

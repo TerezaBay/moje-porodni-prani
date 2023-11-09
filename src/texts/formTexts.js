@@ -151,6 +151,7 @@ export const formQuest = [
       'neprovádět přidržení fundu',
       'vyhnout se vakuové extrakci',
       'vyhnout se porodu kleštěmi',
+      'v 2. době porodní preferuji intermitentní poslech ozev dle doporučení WHO'
     ],
     textDisabled: 'nic z výše uvedeného',
   },
@@ -166,6 +167,7 @@ export const formQuest = [
       'přiložit dítě na holou kůži ihned po narození',
       'přiložit si dítě k prsu hned, jak to bude možné',
       'provést tzv. vaginální seeding',
+      'nechat co nejdéle tepat nepřerušený pupečník'
     ],
     textDisabled: 'nic z výše uvedeného',
   },
